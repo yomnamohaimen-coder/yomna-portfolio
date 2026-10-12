@@ -1,11 +1,23 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout'
+import AboutPage from './pages/AboutPage'
+import CaseStudyPage from './pages/CaseStudyPage'
+import ContactPage from './pages/ContactPage'
+import HomePage from './pages/HomePage'
+import NotFoundPage from './pages/NotFoundPage'
 
-function App() {
+export default function App() {
   return (
-    <main>
-      <h1>Hello, this is Yomna's portfolio</h1>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/work/:slug" element={<CaseStudyPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
