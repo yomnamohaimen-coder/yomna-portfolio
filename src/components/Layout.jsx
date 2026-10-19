@@ -9,10 +9,10 @@ export default function Layout() {
   useEffect(() => {
     if (hash) {
       const target = document.getElementById(hash.slice(1))
-      if (target) {
-        target.scrollIntoView()
-        return
-      }
+      if (!target) return
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' })
+      return
     }
     window.scrollTo(0, 0)
   }, [pathname, hash])

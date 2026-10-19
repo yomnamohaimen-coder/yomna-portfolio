@@ -1,23 +1,19 @@
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import './Header.css'
 
 export default function Header() {
-  const { pathname } = useLocation()
-
   return (
-    <header className="site-header">
-      <div className="header-inner">
-        <Link to="/" className="site-name">
-          Yomna A.Mohaimen
+    <header className="top-nav">
+      <div className="top-nav-inner">
+        <Link to="/" className="top-nav-logo" aria-label="Yomna A. Mohaimen">
+          Y
         </Link>
-        <nav className="site-nav" aria-label="Main">
-          <Link
-            to="/#work"
-            aria-current={pathname === '/' ? 'page' : undefined}
-          >
-            Work
-          </Link>
+        <nav className="top-nav-links" aria-label="Main">
+          <NavLink to="/" end>
+            Home
+          </NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>

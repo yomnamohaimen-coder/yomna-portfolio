@@ -1,0 +1,119 @@
+/*
+  Visual tokens for Yomna's portfolio.
+  Source of truth: the design brief.
+  .top-nav repeats these values so the bar keeps them even if another
+  stylesheet reuses the same variable names.
+*/
+
+:root,
+.top-nav {
+  /* Warm cream page, never pure white. */
+  --color-background: #fbf7f2;
+  /* Warm brown for headlines and body; about 11.6:1 on cream. */
+  --color-text: #3b3330;
+  /* Soft taupe for captions only; about 4.6:1 on cream, so not for long paragraphs. */
+  --color-text-muted: #7a6f68;
+  /* The only accent: links, hover, and the active menu item, not small body text. */
+  --color-accent: #c9577f;
+  /* Flat blush block behind the hero photo. No gradient. */
+  --color-blush: #f6e3e6;
+  /* Flexpay card tint. */
+  --color-tint-blush: #f6e3e6;
+  /* Goalden card tint. */
+  --color-tint-sage: #dce5d8;
+  /* Usability report card tint. */
+  --color-tint-powder: #dde6ee;
+  /* Sensa card tint. */
+  --color-tint-sand: #f1e6d6;
+  /* About page only: warm charcoal, never pure black. */
+  --color-surface-dark: #2b2522;
+  /* Cream text on the About page; about 14:1 on charcoal. */
+  --color-text-on-dark: var(--color-background);
+  /* Quieter cream for secondary text on charcoal; still above 4.5:1. */
+  --color-text-muted-on-dark: #c9bbb3;
+  /* Warm hairline so edges stay visible without a hard gray border. */
+  --color-border: #e6dcd3;
+
+  /* Headlines, the Y logo, and the large About line. */
+  --font-serif: "Newsreader", "Iowan Old Style", Palatino, serif;
+  /* Body text, navigation, and buttons. */
+  --font-sans: "Figtree", "Avenir Next", "Segoe UI", sans-serif;
+
+  /* Large hero headline: 56px on a phone, up to 80px on a wide screen. */
+  --font-size-h1: clamp(3.5rem, 4vw + 1.5rem, 5rem);
+  /* Section headline, kept inside the brief's 32–40px range. */
+  --font-size-h2: clamp(2rem, 1vw + 1.5rem, 2.5rem);
+  /* Project titles, smaller than page headlines but still serif. */
+  --font-size-h3: 1.5rem;
+  /* Body copy at 18px. */
+  --font-size-body: 1.125rem;
+  /* Small uppercase navigation labels. */
+  --font-size-nav: 0.875rem;
+  /* Captions and the role, timeline, and tools row. */
+  --font-size-caption: 0.875rem;
+  /* Tight headline leading so large type feels calm, not loose. */
+  --line-height-heading: 1.05;
+  /* Comfortable body leading inside the brief's 1.6–1.7 range. */
+  --line-height-body: 1.65;
+  /* Wide tracking so short navigation words feel quiet and spaced. */
+  --letter-spacing-nav: 0.14em;
+  /* Headline weight: Newsreader 600, the heavier of the two loaded weights. */
+  --font-weight-heading: 600;
+  /* Regular text weight. */
+  --font-weight-body: 400;
+  /* Case-study text column, about 680px. */
+  --measure-body: 42.5rem;
+  /* Wider image column, about 1100px. */
+  --measure-image: 68.75rem;
+
+  /* 8px rhythm, with extra room between sections. */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* Buttons and small controls, still rounded. */
+  --radius-md: 1rem;
+  /* Photos and project cards, the brief's large corner of about 24px. */
+  --radius-lg: 1.5rem;
+
+  /* One soft warm shadow for project covers. No heavy drop shadow. */
+  --shadow-soft: 0 0.75rem 1.75rem rgb(43 37 34 / 0.08);
+
+  /* Shortest motion, for hover. */
+  --motion-duration-min: 400ms;
+  /* Longest motion, for a page cross-fade. */
+  --motion-duration-max: 600ms;
+  /* Default pace, inside the 400–600ms range. */
+  --motion-duration: 500ms;
+  /* Ease-out so movement settles gently instead of stopping short. */
+  --ease-out: cubic-bezier(0, 0, 0.58, 1);
+  /* How far a scroll reveal travels: 12px upward. */
+  --motion-reveal: 12px;
+}
+
+/* Reduced motion: durations and travel become zero, and animation is switched off. */
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  .top-nav {
+    --motion-duration-min: 0ms;
+    --motion-duration-max: 0ms;
+    --motion-duration: 0ms;
+    --motion-reveal: 0px;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
