@@ -1,0 +1,123 @@
+.home-main {
+  width: auto;
+  max-width: none;
+  margin: 0;
+}
+
+.home-hero {
+  padding-block: var(--space-xl) var(--space-3xl);
+  animation: home-hero-reveal var(--motion-duration) var(--ease-out) both;
+}
+
+.home-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.home-hero-copy,
+.home-hero-portrait {
+  min-width: 0;
+}
+
+.home-hero h1 {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 2.4vw + 1.4rem, 4.5rem);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+  text-wrap: balance;
+}
+
+.home-hero-break {
+  display: none;
+}
+
+.home-hero-text {
+  width: 100%;
+}
+
+.home-hero p {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+@media (min-width: 900px) {
+  .home-hero-text {
+    width: fit-content;
+  }
+
+  .home-hero p {
+    width: 0;
+    min-width: 100%;
+  }
+}
+
+.home-hero-portrait {
+  position: relative;
+  padding-right: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.home-hero-portrait::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  background: var(--color-blush);
+  border-radius: var(--radius-lg);
+  inset: var(--space-md) 0 0 var(--space-md);
+}
+
+.home-hero-photo {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+@keyframes home-hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-reveal));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .home-hero-inner {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.8fr);
+    gap: var(--space-2xl);
+  }
+
+  .home-hero-break {
+    display: inline;
+  }
+
+  .home-hero h1 {
+    text-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero {
+    animation: none;
+  }
+}

@@ -6,9 +6,20 @@ body {
   background: var(--color-background);
 }
 
+.top-nav,
+.home-hero {
+  padding-inline: var(--space-md);
+}
+
+.top-nav-inner,
+.home-hero-inner {
+  max-width: var(--measure-image);
+  margin-inline: auto;
+}
+
 .top-nav {
   background: var(--color-background);
-  padding: var(--space-lg) var(--space-md);
+  padding-block: var(--space-lg);
 }
 
 .top-nav-inner {
@@ -16,8 +27,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-sm);
-  max-width: var(--measure-image);
-  margin-inline: auto;
 }
 
 .top-nav-logo {
@@ -61,7 +70,8 @@ body {
 }
 
 @media (min-width: 48rem) {
-  .top-nav {
+  .top-nav,
+  .home-hero {
     padding-inline: var(--space-lg);
   }
 

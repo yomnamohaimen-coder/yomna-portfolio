@@ -1,12 +1,13 @@
 /*
   Visual tokens for Yomna's portfolio.
   Source of truth: the design brief.
-  .top-nav repeats these values so the bar keeps them even if another
-  stylesheet reuses the same variable names.
+  .top-nav and .home-hero repeat these values so those sections keep them
+  even if another stylesheet reuses the same variable names.
 */
 
 :root,
-.top-nav {
+.top-nav,
+.home-hero {
   /* Warm cream page, never pure white. */
   --color-background: #fbf7f2;
   /* Warm brown for headlines and body; about 11.6:1 on cream. */
@@ -101,7 +102,8 @@
 /* Reduced motion: durations and travel become zero, and animation is switched off. */
 @media (prefers-reduced-motion: reduce) {
   :root,
-  .top-nav {
+  .top-nav,
+  .home-hero {
     --motion-duration-min: 0ms;
     --motion-duration-max: 0ms;
     --motion-duration: 0ms;
