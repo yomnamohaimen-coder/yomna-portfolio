@@ -34,7 +34,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="home-work" aria-labelledby="home-work-label">
+      <section id="work" className="home-work" aria-labelledby="home-work-label">
         <div className="home-work-inner">
           <h2 id="home-work-label" className="home-work-label">
             Selected work
