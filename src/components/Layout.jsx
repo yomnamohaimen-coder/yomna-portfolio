@@ -21,7 +21,7 @@ export default function Layout() {
     <>
       <Header />
       <Outlet />
-      {pathname !== '/' && <Footer />}
+      <Footer />
     </>
   )
 }

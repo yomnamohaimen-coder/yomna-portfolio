@@ -121,3 +121,165 @@
     animation: none;
   }
 }
+
+/*
+  The older stylesheet rewrites a few token names on the whole page.
+  Repeating them here keeps this section on the warm brown and the 32px gap.
+*/
+.home-work {
+  --color-text: #3b3330;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  color: var(--color-text);
+  padding-bottom: var(--space-3xl);
+  padding-inline: var(--space-md);
+}
+
+.home-work-inner {
+  max-width: var(--measure-image);
+  margin-inline: auto;
+}
+
+.home-work-label {
+  margin: 0 0 calc(var(--space-lg) + var(--space-2xs));
+  font-family: var(--font-sans);
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-nav);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.home-work-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+}
+
+.home-work-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition:
+    opacity var(--motion-duration-min) var(--ease-out),
+    transform var(--motion-duration-min) var(--ease-out),
+    box-shadow var(--motion-duration-min) var(--ease-out);
+}
+
+.home-work-card:focus-visible {
+  outline: var(--space-3xs) solid var(--color-accent);
+  outline-offset: var(--space-3xs);
+}
+
+.home-work-grid:has(.home-work-card:hover, .home-work-card:focus-visible) .home-work-card {
+  opacity: 0.4;
+}
+
+.home-work-grid:has(.home-work-card:hover) .home-work-card:hover,
+.home-work-grid:has(.home-work-card:focus-visible) .home-work-card:focus-visible {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(calc(var(--space-3xs) * -1));
+  box-shadow: var(--shadow-soft);
+}
+
+.home-work-cover {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.home-work-copy {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.25rem;
+}
+
+.home-work-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.home-work-placeholder {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.home-work-title {
+  margin: 0 0 var(--space-2xs);
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-heading);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.home-work-highlight {
+  margin: 0 0 var(--space-sm);
+  overflow: hidden;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-body);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.home-work-cta {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-accent);
+}
+
+.home-work-arrow {
+  margin-left: var(--space-2xs);
+}
+
+@media (min-width: 48rem) {
+  .home-work {
+    padding-inline: var(--space-lg);
+  }
+}
+
+@media (min-width: 800px) {
+  .home-work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-work-card {
+    transition: none;
+  }
+
+  .home-work-grid:has(.home-work-card:hover, .home-work-card:focus-visible) .home-work-card {
+    opacity: 1;
+  }
+
+  .home-work-grid:has(.home-work-card:hover) .home-work-card:hover,
+  .home-work-grid:has(.home-work-card:focus-visible) .home-work-card:focus-visible {
+    transform: none;
+  }
+}

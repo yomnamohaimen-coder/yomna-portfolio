@@ -1,0 +1,101 @@
+.contact-footer {
+  padding-bottom: var(--space-xl);
+  padding-inline: var(--space-md);
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.contact-footer-inner {
+  max-width: var(--measure-image);
+  margin-inline: auto;
+  padding-top: var(--space-4xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-footer-title {
+  max-width: 18em;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+  text-wrap: balance;
+}
+
+.contact-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.contact-footer-links a {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    color var(--motion-duration-min) var(--ease-out),
+    text-decoration-color var(--motion-duration-min) var(--ease-out),
+    background-color var(--motion-duration-min) var(--ease-out);
+}
+
+.contact-footer-links a:not(.contact-footer-cv) {
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-text-muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.contact-footer-links a:hover,
+.contact-footer-links a:focus-visible {
+  color: var(--color-accent);
+}
+
+.contact-footer-links a:not(.contact-footer-cv):hover,
+.contact-footer-links a:not(.contact-footer-cv):focus-visible {
+  text-decoration-color: var(--color-accent);
+}
+
+.contact-footer-links a:focus-visible {
+  outline: var(--space-3xs) solid var(--color-accent);
+  outline-offset: var(--space-3xs);
+}
+
+.contact-footer-cv {
+  padding: var(--space-2xs) var(--space-sm);
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-md);
+  background: transparent;
+}
+
+.contact-footer-links a.contact-footer-cv:hover,
+.contact-footer-links a.contact-footer-cv:focus-visible {
+  background-color: var(--color-blush);
+  color: var(--color-text);
+}
+
+.contact-footer-meta {
+  margin: 4rem 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 48rem) {
+  .contact-footer {
+    padding-inline: var(--space-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-footer-links a {
+    transition: none;
+  }
+}
