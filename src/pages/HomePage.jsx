@@ -1,39 +1,8 @@
 import { Link } from 'react-router-dom'
+import { projects } from '../data/projects'
 import photo from '../assets/yomna-hero-4x5.jpg'
 import { usePageTitle } from '../usePageTitle'
 import './HomePage.css'
-
-// cover stays empty until an image is added from src/assets/covers/.
-const selectedWork = [
-  {
-    title: 'Sensa',
-    slug: 'sensa',
-    highlight: 'One-line highlight goes here.',
-    tint: 'var(--color-tint-sand)',
-    cover: null,
-  },
-  {
-    title: 'Flexpay',
-    slug: 'flexpay',
-    highlight: 'One-line highlight goes here.',
-    tint: 'var(--color-tint-blush)',
-    cover: null,
-  },
-  {
-    title: 'Goalden',
-    slug: 'goalden',
-    highlight: 'One-line highlight goes here.',
-    tint: 'var(--color-tint-sage)',
-    cover: null,
-  },
-  {
-    title: 'Usability Performance Report',
-    slug: 'usability-performance-report',
-    highlight: 'One-line highlight goes here.',
-    tint: 'var(--color-tint-powder)',
-    cover: null,
-  },
-]
 
 export default function HomePage() {
   usePageTitle('Yomna A. Mohaimen')
@@ -71,7 +40,7 @@ export default function HomePage() {
             Selected work
           </h2>
           <div className="home-work-grid">
-            {selectedWork.map((project) => (
+            {projects.map((project) => (
               <Link key={project.slug} className="home-work-card" to={`/work/${project.slug}`}>
                 <div className="home-work-cover" style={{ background: project.tint }}>
                   {project.cover ? (
