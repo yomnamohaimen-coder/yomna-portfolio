@@ -1,4 +1,6 @@
-// One list of projects. The case study page reads from here.
+// One list of projects, in display order. The Home work grid and the case study
+// page (including "Next project") both read from here.
+// cover: an imported image from src/assets/covers/, or null to show the tint.
 // To hide a section, delete it or leave its blocks empty.
 // Block types: "text", "image", "image-text".
 
@@ -6,10 +8,77 @@ const placeholder = '/images/placeholder.svg'
 
 export const projects = [
   {
+    slug: 'sensa',
+    title: 'Sensa',
+    highlight: 'One-line highlight goes here.',
+    tint: 'var(--color-tint-sand)',
+    cover: null,
+    tagline: 'A data analysis tool, designed and built end to end.',
+    role: 'Product designer',
+    timeline: '2025',
+    tools: ['Figma', 'React'],
+    sections: [
+      {
+        heading: 'Overview',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Placeholder overview. Sensa is a tool for reading data without getting lost in charts.',
+          },
+        ],
+      },
+      {
+        heading: 'Problem',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Placeholder problem. People could open reports, but they could not tell what mattered.',
+          },
+        ],
+      },
+      {
+        heading: 'Process',
+        blocks: [
+          {
+            type: 'image',
+            src: placeholder,
+            alt: 'Placeholder image for the Sensa process',
+          },
+          {
+            type: 'text',
+            text: 'Placeholder process. From early layout ideas through to a working version.',
+          },
+        ],
+      },
+      {
+        heading: 'Solution',
+        blocks: [
+          {
+            type: 'image-text',
+            src: placeholder,
+            alt: 'Placeholder image for the Sensa solution',
+            text: 'Placeholder solution. A clearer way to scan a dataset and focus on one question.',
+          },
+        ],
+      },
+      {
+        heading: 'Outcome',
+        blocks: [
+          {
+            type: 'text',
+            text: 'Placeholder outcome. How the finished tool was used.',
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'flexpay',
     title: 'Flexpay',
+    highlight: 'One-line highlight goes here.',
+    tint: 'var(--color-tint-blush)',
+    cover: null,
     tagline: 'A light BNPL flow designed to make shopping easier and clearer.',
-    coverImage: '/images/flexpay-cover.svg',
     role: 'Product designer',
     timeline: '2024',
     tools: ['Figma', 'FigJam'],
@@ -76,8 +145,10 @@ export const projects = [
   {
     slug: 'goalden',
     title: 'Goalden',
+    highlight: 'One-line highlight goes here.',
+    tint: 'var(--color-tint-sage)',
+    cover: null,
     tagline: 'A simple savings flow that guides beginners with clarity.',
-    coverImage: '/images/goalden-cover.svg',
     role: 'Product designer',
     timeline: '2024',
     tools: ['Figma'],
@@ -139,8 +210,10 @@ export const projects = [
   {
     slug: 'usability-performance-report',
     title: 'Usability Performance Report',
+    highlight: 'One-line highlight goes here.',
+    tint: 'var(--color-tint-powder)',
+    cover: null,
     tagline: 'A usability analysis of user behavior with Amplitude and testing.',
-    coverImage: '/images/usability-cover.svg',
     role: 'UX researcher',
     timeline: '2025',
     tools: ['Amplitude', 'Maze'],
@@ -194,69 +267,6 @@ export const projects = [
           {
             type: 'text',
             text: 'Placeholder outcome. What the team decided to change after the report.',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: 'sensa',
-    title: 'Sensa',
-    tagline: 'A data analysis tool, designed and built end to end.',
-    coverImage: '/images/sensa-cover.svg',
-    role: 'Product designer',
-    timeline: '2025',
-    tools: ['Figma', 'React'],
-    sections: [
-      {
-        heading: 'Overview',
-        blocks: [
-          {
-            type: 'text',
-            text: 'Placeholder overview. Sensa is a tool for reading data without getting lost in charts.',
-          },
-        ],
-      },
-      {
-        heading: 'Problem',
-        blocks: [
-          {
-            type: 'text',
-            text: 'Placeholder problem. People could open reports, but they could not tell what mattered.',
-          },
-        ],
-      },
-      {
-        heading: 'Process',
-        blocks: [
-          {
-            type: 'image',
-            src: placeholder,
-            alt: 'Placeholder image for the Sensa process',
-          },
-          {
-            type: 'text',
-            text: 'Placeholder process. From early layout ideas through to a working version.',
-          },
-        ],
-      },
-      {
-        heading: 'Solution',
-        blocks: [
-          {
-            type: 'image-text',
-            src: placeholder,
-            alt: 'Placeholder image for the Sensa solution',
-            text: 'Placeholder solution. A clearer way to scan a dataset and focus on one question.',
-          },
-        ],
-      },
-      {
-        heading: 'Outcome',
-        blocks: [
-          {
-            type: 'text',
-            text: 'Placeholder outcome. How the finished tool was used.',
           },
         ],
       },
