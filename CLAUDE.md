@@ -3,6 +3,10 @@
 Personal portfolio site for Yomna A. Mohaimen, product designer.
 Built with React + Vite (React Router for pages).
 
+`docs/design-brief.md` is the source of truth for the design. Read it before
+any visual change, and follow it over any default style. This file is a
+short summary of it.
+
 - `npm run dev` — local preview
 - `npm run build` — check nothing is broken before committing
 
@@ -25,8 +29,6 @@ Built with React + Vite (React Router for pages).
 - Fonts: Newsreader for headlines, Figtree for text.
 - Motion is slow with an ease-out curve, and always respects
   `prefers-reduced-motion`.
-
-The full brief belongs in `docs/design-brief` (not added to the repo yet).
 
 ## Site structure
 
