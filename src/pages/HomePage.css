@@ -1,15 +1,12 @@
-.home-main {
-  width: auto;
-  max-width: none;
-  margin: 0;
-}
-
 .home-hero {
   padding-block: var(--space-xl) var(--space-3xl);
+  padding-inline: var(--space-md);
   animation: home-hero-reveal var(--motion-duration) var(--ease-out) both;
 }
 
 .home-hero-inner {
+  max-width: var(--measure-image);
+  margin-inline: auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--space-xl);
@@ -86,7 +83,7 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
 }
 
 @keyframes home-hero-reveal {
@@ -102,6 +99,10 @@
 }
 
 @media (min-width: 48rem) {
+  .home-hero {
+    padding-inline: var(--space-lg);
+  }
+
   .home-hero-inner {
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.8fr);
     gap: var(--space-2xl);
@@ -122,17 +123,7 @@
   }
 }
 
-/*
-  The older stylesheet rewrites a few token names on the whole page.
-  Repeating them here keeps this section on the warm brown and the 32px gap.
-*/
 .home-work {
-  --color-text: #3b3330;
-  --space-2xs: 0.5rem;
-  --space-xs: 0.75rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4rem;
   color: var(--color-text);
   padding-bottom: var(--space-3xl);
   padding-inline: var(--space-md);

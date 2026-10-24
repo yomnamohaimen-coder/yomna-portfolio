@@ -1,10 +1,6 @@
 /* Case study page: the opening, the blocks, then the prototype and next project. */
 
 .case-study {
-  width: auto;
-  max-width: none;
-  margin: 0;
-  padding: 0;
   color: var(--color-text);
 }
 

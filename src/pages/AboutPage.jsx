@@ -1,5 +1,6 @@
 import CvButtons from '../components/CvButtons'
 import { usePageTitle } from '../usePageTitle'
+import './LegacyPage.css'
 
 const skills = [
   'Product design',

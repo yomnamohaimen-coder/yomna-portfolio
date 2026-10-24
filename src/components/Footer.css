@@ -80,7 +80,7 @@
 }
 
 .contact-footer-meta {
-  margin: 4rem 0 0;
+  margin: var(--space-2xl) 0 0;
   font-family: var(--font-sans);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-body);
