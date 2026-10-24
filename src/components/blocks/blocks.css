@@ -53,7 +53,7 @@
   aspect-ratio: 4 / 3;
 }
 
-.case-image--phone img,
+/* Phone screens keep their own shape so device frames are never cropped. */
 .case-image--phone .case-image-placeholder {
   aspect-ratio: 9 / 19.5;
 }

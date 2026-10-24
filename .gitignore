@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw content imported from the old Framer site (not part of the site)
+content-import/

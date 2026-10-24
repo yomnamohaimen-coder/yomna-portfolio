@@ -15,10 +15,21 @@
 //     twoImages  { images: [{ src, alt, caption }, { src, alt, caption }] }
 //     quote      { text, source }
 //     results    { items: [{ value, label }] } (two to four items)
-//     gallery    { shape: 'landscape' or 'phone', images: [{ src, alt }] }
+//     gallery    { shape: 'landscape' or 'phone', images: [{ src, alt, caption }] }
 //
 // Images go in src/assets/projects/<slug>/. Import them at the top of this file
 // and use the import as src. An empty src shows an "Image placeholder" box.
+
+import flexpayCheckoutPlans from '../assets/projects/flexpay/checkout-plans.png'
+import flexpayCreditLimit from '../assets/projects/flexpay/credit-limit.png'
+import flexpayHome from '../assets/projects/flexpay/home.png'
+import flexpayInstallmentDetails from '../assets/projects/flexpay/installment-details.png'
+import flexpayMyPayments from '../assets/projects/flexpay/my-payments.png'
+import flexpayNotifications from '../assets/projects/flexpay/notifications.png'
+import flexpayOnboardingAllSet from '../assets/projects/flexpay/onboarding-all-set.png'
+import flexpayOrderReview from '../assets/projects/flexpay/order-review.png'
+import flexpayScreensOverview from '../assets/projects/flexpay/screens-overview.png'
+import flexpayWelcome from '../assets/projects/flexpay/welcome.png'
 
 export const projects = [
   {
@@ -89,68 +100,81 @@ export const projects = [
     highlight: 'One-line highlight goes here.',
     tint: 'var(--color-tint-blush)',
     cover: null,
-    summary: 'A light BNPL flow designed to make shopping easier and clearer.',
+    summary: 'A light, friendly BNPL experience designed for Egyptian shoppers.',
     meta: {
       type: 'Concept project',
       role: 'Product designer',
-      year: '2024',
-      tools: ['Figma', 'FigJam'],
+      year: '2025',
+      tools: ['Figma'],
     },
+    // TODO: a wide image of the final design for the opening (see gaps.md).
     heroImage: { src: '', alt: 'Flexpay final design' },
+    prototypeUrl: 'https://www.figma.com/design/iof6FVLWu2L2sKjhZhvb8x/Flexpay?node-id=58-5058',
     blocks: [
       {
         type: 'text',
         heading: 'The problem',
         paragraphs: [
-          'Placeholder. Buy now, pay later is common in Egypt, but using it often feels stressful and complicated.',
-          'Placeholder. Onboarding is long, payment breakdowns are confusing, and there is little reassurance about what you will pay and when.',
+          'Buy now, pay later apps are widely used in Egypt, but they still feel stressful and complicated for everyday shoppers. I kept noticing the same issues: long onboarding, confusing payment breakdowns, unclear installments, a bank-like tone, and no reassurance at key steps. People came away anxious instead of comfortable.',
         ],
       },
       {
         type: 'text',
         heading: 'The solution',
         paragraphs: [
-          'Placeholder. A short description of the Flexpay flow and how it makes paying in parts feel clear and calm.',
+          'Flexpay is a lighter BNPL flow that helps people shop with confidence, not stress. I redesigned the whole journey, from sign-up and browsing to checkout and managing payments, to feel simpler, more human and easier to trust.',
         ],
       },
       {
         type: 'image',
-        src: '',
-        alt: 'Flexpay solution overview',
-        caption: 'Placeholder caption for the solution image.',
+        src: flexpayScreensOverview,
+        alt: 'Several Flexpay phone screens, including plan details with a payment breakdown and a "You\'re all set" screen at the end of sign-up.',
+        caption: 'Plan details, the end of sign-up, and shopping screens.',
       },
       {
         type: 'text',
         heading: 'How I did it',
         paragraphs: [
-          'Placeholder. The process, told as decisions: because people worry about hidden fees, I did this.',
-          'Placeholder. The three strongest findings from the research, and what each one changed in the design.',
+          'I reviewed regional and global BNPL apps to find patterns, strengths, weaknesses and opportunities. TODO: which apps I reviewed, and where the pain points and needs came from. Three findings shaped the design most.',
+          'Because people drop off early when onboarding feels long, I kept sign-up to minimal steps with a quick ID check, so people get straight to stores and installment plans. My goal was sign-up in under 2 minutes.',
+          'Because clear numbers build trust and hidden fees came up as a pain point, checkout shows the full breakdown before anything is confirmed. People choose a plan, review the total without hidden fees, and then confirm.',
+          'Because overdue payments should not feel scary, I used friendly language and timely reminders, and made it easy to track plans and payment history.',
         ],
       },
       {
-        type: 'quote',
-        text: 'Placeholder. A quote from a research participant goes here.',
-        source: 'Placeholder source, for example a research participant',
-      },
-      {
-        type: 'twoImages',
+        type: 'gallery',
+        shape: 'phone',
         images: [
-          { src: '', alt: 'Flexpay process screen one', caption: 'Placeholder caption.' },
-          { src: '', alt: 'Flexpay process screen two', caption: 'Placeholder caption.' },
+          {
+            src: flexpayOnboardingAllSet,
+            alt: 'Flexpay "You\'re all set" screen showing a purchase limit and three completed checks: phone, profile and identity.',
+            caption: 'Sign-up ends with a clear summary of what is verified.',
+          },
+          {
+            src: flexpayOrderReview,
+            alt: 'Flexpay order review screen with total, down payment, interest, monthly installment and payment schedule.',
+            caption: 'The full breakdown, before confirming.',
+          },
+          {
+            src: flexpayNotifications,
+            alt: 'Flexpay notifications screen with a payment reminder, a payment confirmation and an overdue notice.',
+            caption: 'Reminders and overdue notices in calm language.',
+          },
         ],
       },
       {
         type: 'text',
         heading: 'The outcome',
         paragraphs: [
-          'Placeholder. What the design achieves against the goals, what was tested with real people, what was learned, and what would be measured next.',
+          'Flexpay is a concept project. The design aims for four goals: simple onboarding, transparent installments, support for local payment methods like mobile wallets and Instapay, and less financial anxiety.',
+          'TODO: whether the prototype was tested with people, what I learned, and what I would measure next.',
         ],
       },
       {
         type: 'results',
         items: [
+          { value: '—', label: 'Sign-up time (goal: under 2 minutes)' },
           { value: '—', label: 'Sign-up steps vs. competitors' },
-          { value: '—', label: 'Steps to see the full payment plan' },
           { value: '—', label: 'People who tested it' },
         ],
       },
@@ -158,12 +182,12 @@ export const projects = [
         type: 'gallery',
         shape: 'phone',
         images: [
-          { src: '', alt: 'Flexpay screen' },
-          { src: '', alt: 'Flexpay screen' },
-          { src: '', alt: 'Flexpay screen' },
-          { src: '', alt: 'Flexpay screen' },
-          { src: '', alt: 'Flexpay screen' },
-          { src: '', alt: 'Flexpay screen' },
+          { src: flexpayWelcome, alt: 'Flexpay welcome screen with instant approval, security and flexible payments.' },
+          { src: flexpayHome, alt: 'Flexpay home screen with search, categories, an offer and quick actions.' },
+          { src: flexpayCheckoutPlans, alt: 'Flexpay checkout screen with 3, 6 and 12 month installment options and payment methods.' },
+          { src: flexpayMyPayments, alt: 'Flexpay My Payments screen with active plans, next payment date and credit limit.' },
+          { src: flexpayInstallmentDetails, alt: 'Flexpay completed plan screen with payment summary and payment history.' },
+          { src: flexpayCreditLimit, alt: 'Flexpay credit limit screen showing used and available credit and a breakdown by plan.' },
         ],
       },
     ],
