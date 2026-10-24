@@ -1,0 +1,169 @@
+/* Case study page: the opening, the blocks, then the prototype and next project. */
+
+.case-study {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+}
+
+/* Links: brown with a thin muted underline, rose on hover and focus. */
+.case-link {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-text-muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: var(--space-3xs);
+  transition: color var(--motion-duration-min) var(--ease-out);
+}
+
+.case-link:hover,
+.case-link:focus-visible,
+.case-next:hover,
+.case-next:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.case-link:focus-visible,
+.case-next:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: var(--space-3xs);
+}
+
+/* Opening: a full-width block in the project's tint. */
+.case-opening-tint {
+  padding: var(--space-xl) var(--space-md) var(--space-3xl);
+  background: var(--case-tint);
+}
+
+.case-opening-inner,
+.case-hero {
+  max-width: var(--measure-image);
+  margin-inline: auto;
+}
+
+.case-back {
+  display: inline-block;
+  margin-bottom: var(--space-xl);
+  font-size: var(--font-size-caption);
+}
+
+.case-opening h1 {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+  text-wrap: balance;
+}
+
+.case-summary {
+  max-width: var(--measure-body);
+  margin: 0 0 var(--space-xl);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-xl);
+  margin: 0;
+}
+
+.case-meta > div {
+  min-width: 0;
+}
+
+.case-meta dt {
+  margin-bottom: var(--space-3xs);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  letter-spacing: var(--letter-spacing-nav);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.case-meta dd {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+}
+
+.case-hero {
+  padding: var(--space-xl) var(--space-md) 0;
+  box-sizing: content-box;
+}
+
+/* Blocks and the end links share the page gutter. */
+.case-body {
+  padding: var(--space-3xl) var(--space-md) 0;
+}
+
+.case-end {
+  display: grid;
+  gap: var(--space-xl);
+  max-width: var(--measure-body);
+  margin: var(--space-3xl) auto 0;
+}
+
+.case-end > .case-link {
+  justify-self: start;
+  font-size: var(--font-size-body);
+}
+
+.case-next {
+  display: grid;
+  gap: var(--space-2xs);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--motion-duration-min) var(--ease-out);
+}
+
+.case-next-label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  letter-spacing: var(--letter-spacing-nav);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.case-next-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+}
+
+@media (min-width: 48rem) {
+  .case-opening-tint,
+  .case-hero,
+  .case-body {
+    padding-inline: var(--space-lg);
+  }
+
+  .case-opening-tint {
+    padding-top: var(--space-2xl);
+  }
+}
+
+@media (min-width: 64rem) {
+  .case-body {
+    padding-top: var(--space-4xl);
+  }
+
+  .case-end {
+    margin-top: var(--space-4xl);
+  }
+}

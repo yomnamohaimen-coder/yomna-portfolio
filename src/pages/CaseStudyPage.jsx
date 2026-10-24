@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom'
-import ContentBlocks from '../components/ContentBlocks'
-import { sectionHasContent } from '../sectionContent'
+import BlockRenderer from '../components/blocks/BlockRenderer'
+import CaseStudyOpening from '../components/CaseStudyOpening'
 import { getNextProject, getProjectBySlug } from '../data/projects'
 import { usePageTitle } from '../usePageTitle'
 import NotFoundPage from './NotFoundPage'
+import './CaseStudyPage.css'
 
 export default function CaseStudyPage() {
   const { slug } = useParams()
@@ -16,48 +17,32 @@ export default function CaseStudyPage() {
 
   if (!project) return <NotFoundPage />
 
-  const visibleSections = project.sections.filter(sectionHasContent)
-
   return (
-    <main className="case-study">
-      <header className="case-header">
-        <h1>{project.title}</h1>
-        <p className="tagline">{project.tagline}</p>
-        <dl className="info-row">
-          {project.role ? (
-            <div>
-              <dt>Role</dt>
-              <dd>{project.role}</dd>
-            </div>
-          ) : null}
-          {project.timeline ? (
-            <div>
-              <dt>Timeline</dt>
-              <dd>{project.timeline}</dd>
-            </div>
-          ) : null}
-          {project.tools?.length ? (
-            <div>
-              <dt>Tools</dt>
-              <dd>{project.tools.join(', ')}</dd>
-            </div>
-          ) : null}
-        </dl>
-      </header>
+    // --case-tint lets placeholders and the opening use this project's tint.
+    <main className="case-study" style={{ '--case-tint': project.tint }}>
+      <CaseStudyOpening project={project} />
 
-      {visibleSections.map((section) => (
-        <section key={section.heading} className="case-section">
-          <h2>{section.heading}</h2>
-          <ContentBlocks blocks={section.blocks} />
-        </section>
-      ))}
+      <div className="case-body">
+        <BlockRenderer blocks={project.blocks} />
 
-      <nav className="case-nav" aria-label="Project">
-        <Link to="/#work">Back to work</Link>
-        {nextProject ? (
-          <Link to={`/work/${nextProject.slug}`}>Next project: {nextProject.title}</Link>
+        {project.prototypeUrl || nextProject ? (
+          <nav className="case-end" aria-label="Project">
+            {project.prototypeUrl ? (
+              <a className="case-link" href={project.prototypeUrl} target="_blank" rel="noreferrer">
+                View the prototype <span aria-hidden="true">↗</span>
+              </a>
+            ) : null}
+            {nextProject ? (
+              <Link className="case-next" to={`/work/${nextProject.slug}`}>
+                <span className="case-next-label">Next project</span>
+                <span className="case-next-title">
+                  {nextProject.title} <span aria-hidden="true">→</span>
+                </span>
+              </Link>
+            ) : null}
+          </nav>
         ) : null}
-      </nav>
+      </div>
     </main>
   )
 }

@@ -1,14 +1,15 @@
 /*
   Visual tokens for Yomna's portfolio.
   Source of truth: the design brief.
-  .top-nav, .home-hero, and .contact-footer repeat these values so those
-  sections keep them even if another stylesheet reuses the same variable names.
+  .top-nav, .home-hero, .contact-footer, and .case-study repeat these values so
+  those sections keep them even if another stylesheet reuses the same variable names.
 */
 
 :root,
 .top-nav,
 .home-hero,
-.contact-footer {
+.contact-footer,
+.case-study {
   /* Warm cream page, never pure white. */
   --color-background: #fbf7f2;
   /* Warm brown for headlines and body; about 11.6:1 on cream. */
@@ -105,7 +106,8 @@
   :root,
   .top-nav,
   .home-hero,
-  .contact-footer {
+  .contact-footer,
+  .case-study {
     --motion-duration-min: 0ms;
     --motion-duration-max: 0ms;
     --motion-duration: 0ms;
