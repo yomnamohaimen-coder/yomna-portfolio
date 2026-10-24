@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { usePageTitle } from '../usePageTitle'
+import './LegacyPage.css'
 
 export default function NotFoundPage() {
   usePageTitle('Page not found — Yomna A.Mohaimen')

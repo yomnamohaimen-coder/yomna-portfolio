@@ -1,25 +1,12 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--color-background);
-}
-
-.top-nav,
-.home-hero {
-  padding-inline: var(--space-md);
-}
-
-.top-nav-inner,
-.home-hero-inner {
-  max-width: var(--measure-image);
-  margin-inline: auto;
-}
-
 .top-nav {
+  padding-inline: var(--space-md);
   background: var(--color-background);
   padding-block: var(--space-lg);
+}
+
+.top-nav-inner {
+  max-width: var(--measure-image);
+  margin-inline: auto;
 }
 
 .top-nav-inner {
@@ -70,8 +57,7 @@ body {
 }
 
 @media (min-width: 48rem) {
-  .top-nav,
-  .home-hero {
+  .top-nav {
     padding-inline: var(--space-lg);
   }
 

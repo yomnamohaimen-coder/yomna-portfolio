@@ -1,14 +1,9 @@
 /*
-  Visual tokens for Yomna's portfolio.
+  Visual tokens for Yomna's portfolio: the only place tokens are defined.
   Source of truth: the design brief.
-  .top-nav, .home-hero, and .contact-footer repeat these values so those
-  sections keep them even if another stylesheet reuses the same variable names.
 */
 
-:root,
-.top-nav,
-.home-hero,
-.contact-footer {
+:root {
   /* Warm cream page, never pure white. */
   --color-background: #fbf7f2;
   /* Warm brown for headlines and body; about 11.6:1 on cream. */
@@ -100,24 +95,12 @@
   --motion-reveal: 12px;
 }
 
-/* Reduced motion: durations and travel become zero, and animation is switched off. */
+/* Reduced motion: durations and travel become zero. */
 @media (prefers-reduced-motion: reduce) {
-  :root,
-  .top-nav,
-  .home-hero,
-  .contact-footer {
+  :root {
     --motion-duration-min: 0ms;
     --motion-duration-max: 0ms;
     --motion-duration: 0ms;
     --motion-reveal: 0px;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }

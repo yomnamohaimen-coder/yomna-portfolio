@@ -42,3 +42,4 @@ short summary of it.
   4. Usability Performance Report
 - `src/data/projects.js` is the only list of projects. The Home work grid
   and each case study's "Next project" link both read from it.
+- There is no CMS. Case study content lives in `src/data/projects.js` as a list of blocks, and images live in `src/assets/projects/<slug>/`.
