@@ -103,7 +103,7 @@ export const projects = [
     summary: 'A light, friendly BNPL experience designed for Egyptian shoppers.',
     meta: {
       type: 'Concept project',
-      role: 'Product designer',
+      role: 'Product designer, solo',
       year: '2025',
       tools: ['Figma'],
     },
@@ -115,7 +115,7 @@ export const projects = [
         type: 'text',
         heading: 'The problem',
         paragraphs: [
-          'Buy now, pay later apps are widely used in Egypt, but they still feel stressful and complicated for everyday shoppers. I kept noticing the same issues: long onboarding, confusing payment breakdowns, unclear installments, a bank-like tone, and no reassurance at key steps. People came away anxious instead of comfortable.',
+          'Buy now, pay later apps are widely used in Egypt, but they still feel stressful and complicated for everyday shoppers. In the apps I reviewed, I kept noticing the same issues: long onboarding, confusing payment breakdowns, unclear installments, a bank-like tone, and little reassurance at key steps. My assumption is that this leaves people anxious instead of comfortable.',
         ],
       },
       {
@@ -135,10 +135,20 @@ export const projects = [
         type: 'text',
         heading: 'How I did it',
         paragraphs: [
-          'I reviewed regional and global BNPL apps to find patterns, strengths, weaknesses and opportunities. TODO: which apps I reviewed, and where the pain points and needs came from. Three findings shaped the design most.',
-          'Because people drop off early when onboarding feels long, I kept sign-up to minimal steps with a quick ID check, so people get straight to stores and installment plans. My goal was sign-up in under 2 minutes.',
-          'Because clear numbers build trust and hidden fees came up as a pain point, checkout shows the full breakdown before anything is confirmed. People choose a plan, review the total without hidden fees, and then confirm.',
-          'Because overdue payments should not feel scary, I used friendly language and timely reminders, and made it easy to track plans and payment history.',
+          'This was a solo concept project: I did the research, UX, UI and prototype. The research was desk-based: I reviewed Klarna, valU, Tabby and Afterpay, with help from AI tools, and noted the patterns I saw. It was not validated with real users, so I treated each pattern as an assumption to test.',
+          'Long onboarding was the clearest pattern, and I assumed people give up when sign-up feels long. So sign-up starts with the phone number only and asks for one thing per screen: the phone number, a 6-digit code, then name and address. ID verification is optional, with "Skip for now". My goal was for people to start shopping in under 2 minutes.',
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Ask for the least, explain the most.',
+        source: 'Design principle',
+      },
+      {
+        type: 'text',
+        paragraphs: [
+          'Hidden fees and unclear installment breakdowns also came up in my desk research, and I assumed clear numbers build trust. So checkout shows the full breakdown before anything is confirmed: people choose a plan, review the total, and then confirm.',
+          'I also assumed that overdue payments feel scary. So reminders and overdue notices use friendly language, and people can easily track their plans and payment history.',
         ],
       },
       {
@@ -166,16 +176,31 @@ export const projects = [
         type: 'text',
         heading: 'The outcome',
         paragraphs: [
-          'Flexpay is a concept project. The design aims for four goals: simple onboarding, transparent installments, support for local payment methods like mobile wallets and Instapay, and less financial anxiety.',
-          'TODO: whether the prototype was tested with people, what I learned, and what I would measure next.',
+          'Flexpay is untested: I have not tested the prototype with real people, so there are no results yet. Here is what the design does, from the welcome screen to "You\'re all set".',
         ],
       },
       {
         type: 'results',
         items: [
-          { value: '—', label: 'Sign-up time (goal: under 2 minutes)' },
-          { value: '—', label: 'Sign-up steps vs. competitors' },
-          { value: '—', label: 'People who tested it' },
+          { value: '8', label: 'Sign-up screens, from welcome to "You\'re all set"' },
+          { value: '3', label: 'Required inputs: phone number, code and profile' },
+          { value: '1', label: 'Optional step: ID, which raises the limit from 500 to 5,000' },
+          { value: '—', label: 'Sign-up time (goal: under 2 minutes, not yet timed)' },
+        ],
+      },
+      {
+        type: 'text',
+        heading: 'What I learned',
+        paragraphs: [
+          'Desk research gives patterns, not proof, so I wrote the problem as assumptions to test.',
+          'Making ID verification optional shortens sign-up, but it caps the limit at 500 until someone verifies. That trade-off needs testing.',
+        ],
+      },
+      {
+        type: 'text',
+        heading: 'What I would measure next',
+        paragraphs: [
+          'Sign-up completion rate; time from opening the app to the first purchase, with a target of under 2 minutes; how many people skip ID; whether people understand their limit; and where they stop.',
         ],
       },
       {
