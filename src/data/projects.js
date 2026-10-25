@@ -235,13 +235,13 @@ export const projects = [
   {
     slug: 'goalden',
     title: 'Goalden',
-    highlight: 'One-line highlight goes here.',
+    highlight: 'A beginner-friendly money app that brings accounts, budgets and goals into one clear place.',
     tint: 'var(--color-tint-sage)',
     cover: null,
     summary: 'A simple savings flow that guides beginners with clarity.',
     meta: {
       type: 'Concept project',
-      role: 'Product designer',
+      role: 'Product designer, solo',
       year: '2025',
       tools: ['Figma'],
     },
@@ -250,13 +250,12 @@ export const projects = [
       shape: 'phone',
       alt: 'Goalden home screen with total available balance, a list of accounts and recent transactions.',
     },
-    prototypeUrl: 'https://www.figma.com/design/lR1RZhHDT4RyI5RkHvgbjd/Goalden?node-id=0-1',
     blocks: [
       {
         type: 'text',
         heading: 'The problem',
         paragraphs: [
-          'My starting assumption was that many people want to save but feel lost without a clear starting point, and that finance apps feel intimidating to beginners. I designed for three groups: young professionals who want less money stress, people new to saving who want step-by-step guidance, and freelancers whose income changes from month to month.',
+          'My starting assumption was that many people want to save but feel lost without a clear starting point, and that finance apps feel intimidating to beginners. I designed for young professionals who want to manage their money with less stress, and for people new to saving who want step-by-step guidance.',
         ],
       },
       {
@@ -268,8 +267,7 @@ export const projects = [
         type: 'text',
         heading: 'The solution',
         paragraphs: [
-          'Goalden is a savings app that helps people take control of their money. People link a bank account or add a wallet by hand, see where their money goes, and set spending limits by category, with progress shown visually.',
-          'TODO: saving for goals and investment tips are part of the idea, but no screen shows them yet.',
+          'Goalden is a savings app that helps people take control of their money. People link a bank account or add a wallet by hand, see where their money goes, set spending limits by category, save towards goals, and get investment suggestions based on an assessment of their investment style.',
         ],
       },
       {
@@ -283,9 +281,8 @@ export const projects = [
         type: 'text',
         heading: 'How I did it',
         paragraphs: [
-          'I wrote three personas to keep the design grounded: Nouran, a first-time saver; Karima, a freelance videographer with irregular income; and Salma, a working mom juggling several goals. TODO: whether the personas and findings came from talking to people or from desk research. I then mapped the app in a site map before designing the screens.',
+          'This was a solo concept project: I did the research, UX, UI and prototype design. The research was desk research, supported by ChatGPT, and it was not validated with real users, so I treated each finding as an assumption to test. I wrote three assumption-based personas from desk research to guide the early decisions, then mapped the app in a site map before designing the screens.',
           'Because I assumed most people want to save but feel lost without a clear starting point, setup gives them structure: they link a bank account or add a wallet by hand, then pick the categories they usually spend on.',
-          'Because freelancers\' income changes from month to month, I assumed they need flexible options. People can track cash and savings in wallets they add themselves, not only through a linked bank.',
           'Because many finance apps feel intimidating to beginners, I kept the numbers visual: a bar chart of spending and a progress bar for each budget category.',
         ],
       },
@@ -314,8 +311,22 @@ export const projects = [
         type: 'text',
         heading: 'The outcome',
         paragraphs: [
-          'Goalden is a concept project. The design covers sign-up with a verification code, linking a bank or adding a wallet, transactions, budgets, notifications and the profile.',
-          'TODO: whether the design was tested with people, what I learned, and what I would measure next.',
+          'Goalden is an untested concept project: I have not tested it with real users, so there are no results yet. The design covers sign-up, linking a bank or adding a wallet, transactions, budgets, savings goals, investment suggestions, notifications and the profile.',
+        ],
+      },
+      {
+        type: 'text',
+        heading: 'What I learned',
+        paragraphs: [
+          'An app with many features needs a simple Home.',
+          'Empty and waiting states, like the wait while a bank account links, keep people from feeling lost.',
+        ],
+      },
+      {
+        type: 'text',
+        heading: 'What I would measure next',
+        paragraphs: [
+          'I would test with 3 to 5 people on two tasks, linking a bank account and adding a transaction, and measure task completion and time.',
         ],
       },
       {
