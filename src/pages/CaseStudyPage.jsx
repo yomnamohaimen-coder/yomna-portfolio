@@ -28,8 +28,13 @@ export default function CaseStudyPage() {
         {project.prototypeUrl || nextProject ? (
           <nav className="case-end" aria-label="Project">
             {project.prototypeUrl ? (
-              <a className="case-link" href={project.prototypeUrl} target="_blank" rel="noreferrer">
-                View the prototype <span aria-hidden="true">↗</span>
+              <a
+                className="case-link"
+                href={project.prototypeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.linkLabel ?? 'View the prototype'} <span aria-hidden="true">↗</span>
               </a>
             ) : null}
             {nextProject ? (

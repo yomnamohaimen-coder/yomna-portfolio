@@ -10,6 +10,7 @@
 //   heroImage     { src, alt, caption, shape: 'phone' for a single phone screen }
 //                 (optional; no src shows a placeholder)
 //   prototypeUrl  link to the prototype (optional; no link is shown without it)
+//   linkLabel     text for that link (optional; defaults to "View the prototype")
 //   blocks        the story, in order. Each block has a "type":
 //     text       { heading, paragraphs: [] }
 //     image      { src, alt, caption, shape: 'phone' for a single phone screen (optional) }
@@ -382,6 +383,10 @@ export const projects = [
       src: uprHeatmapOnboarding,
       alt: 'Eight Sary onboarding and registration screens with click heatmaps, from the welcome screen to the profile, with a legend from more clicks to fewer clicks.',
     },
+    // Temporary link; see content-import/usability-performance-report/gaps.md.
+    prototypeUrl:
+      'https://www.figma.com/design/WShhHG2bUAKLKwaDJiPXRx/Usability-performence-report?node-id=0-1&p=f&t=FpkQIfsfci2TInO3-0',
+    linkLabel: 'View the full report in Figma',
     blocks: [
       {
         type: 'text',
