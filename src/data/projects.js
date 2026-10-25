@@ -23,6 +23,7 @@
 // Images go in src/assets/projects/<slug>/. Import them at the top of this file
 // and use the import as src. An empty src shows an "Image placeholder" box.
 
+import flexpayCover from '../assets/covers/flexpay.webp'
 import goaldenCover from '../assets/covers/goalden.webp'
 import usabilityCover from '../assets/covers/usability-performance-report.webp'
 import flexpayCheckoutPlans from '../assets/projects/flexpay/checkout-plans.png'
@@ -117,7 +118,7 @@ export const projects = [
     title: 'Flexpay',
     highlight: 'A light BNPL flow designed to make shopping easier, clearer, and stress-free.',
     tint: 'var(--color-tint-blush)',
-    cover: flexpayScreensOverview,
+    cover: flexpayCover,
     summary: 'A light, friendly BNPL experience designed for Egyptian shoppers.',
     meta: {
       type: 'Concept project',
