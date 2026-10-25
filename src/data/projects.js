@@ -23,6 +23,8 @@
 // Images go in src/assets/projects/<slug>/. Import them at the top of this file
 // and use the import as src. An empty src shows an "Image placeholder" box.
 
+import goaldenCover from '../assets/covers/goalden.webp'
+import usabilityCover from '../assets/covers/usability-performance-report.webp'
 import flexpayCheckoutPlans from '../assets/projects/flexpay/checkout-plans.png'
 import flexpayCreditLimit from '../assets/projects/flexpay/credit-limit.png'
 import flexpayHome from '../assets/projects/flexpay/home.png'
@@ -113,7 +115,7 @@ export const projects = [
   {
     slug: 'flexpay',
     title: 'Flexpay',
-    highlight: 'One-line highlight goes here.',
+    highlight: 'A light BNPL flow designed to make shopping easier, clearer, and stress-free.',
     tint: 'var(--color-tint-blush)',
     cover: flexpayScreensOverview,
     summary: 'A light, friendly BNPL experience designed for Egyptian shoppers.',
@@ -241,7 +243,7 @@ export const projects = [
     title: 'Goalden',
     highlight: 'A beginner-friendly money app for accounts, budgets and goals.',
     tint: 'var(--color-tint-sage)',
-    cover: null,
+    cover: goaldenCover,
     summary: 'A beginner-friendly money app for accounts, budgets and goals.',
     meta: {
       type: 'Concept project',
@@ -372,7 +374,7 @@ export const projects = [
     title: 'Usability Performance Report',
     highlight: "A data-led review of where users drop off in Sary's B2B shopping app.",
     tint: 'var(--color-tint-powder)',
-    cover: null,
+    cover: usabilityCover,
     summary: "A data-led review of where users drop off in Sary's B2B shopping app.",
     meta: {
       type: 'Work project',
