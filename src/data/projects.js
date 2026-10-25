@@ -37,6 +37,7 @@ import goaldenChooseBank from '../assets/projects/goalden/choose-bank.png'
 import goaldenExpenseCategories from '../assets/projects/goalden/expense-categories.png'
 import goaldenHome from '../assets/projects/goalden/home.png'
 import goaldenNotifications from '../assets/projects/goalden/notifications.png'
+import goaldenSitemap from '../assets/projects/goalden/sitemap.avif'
 import goaldenTransactions from '../assets/projects/goalden/transactions.png'
 
 export const projects = [
@@ -277,7 +278,19 @@ export const projects = [
         type: 'text',
         heading: 'How I did it',
         paragraphs: [
-          'This was a solo concept project: I did the research, UX, UI and prototype design. The research was desk research, supported by ChatGPT, and it was not validated with real users, so I treated each finding as an assumption to test. I wrote three assumption-based personas from desk research to guide the early decisions.',
+          'This was a solo concept project: I did the research, UX, UI and prototype design. The research was desk research, supported by ChatGPT, and it was not validated with real users, so I treated each finding as an assumption to test. I wrote three assumption-based personas from desk research to guide the early decisions, then mapped the app in a site map before designing the screens.',
+        ],
+      },
+      {
+        type: 'image',
+        shape: 'narrow',
+        src: goaldenSitemap,
+        alt: 'Goalden site map: Onboarding, Home, Budget, Investment and Menu, each with its main screens, such as Link bank account, Add goal, Risk level and Help.',
+        caption: 'The site map I drew before designing the screens.',
+      },
+      {
+        type: 'text',
+        paragraphs: [
           'Because I assumed most people want to save but feel lost without a clear starting point, setup gives them structure: they link a bank account or add a wallet by hand, then pick the categories they usually spend on.',
           'Because many finance apps feel intimidating to beginners, I kept the numbers visual: a bar chart of spending and a progress bar for each budget category.',
         ],

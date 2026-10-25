@@ -111,6 +111,12 @@
   margin-inline: auto;
 }
 
+/* A narrow figure, such as a diagram, sits centered at its own proportions. */
+.block-wide-image .case-image--narrow {
+  max-width: var(--measure-figure);
+  margin-inline: auto;
+}
+
 .block-two-images {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
