@@ -105,6 +105,12 @@
   margin-inline: auto;
 }
 
+/* A single phone screen sits centered, as wide as one gallery column. */
+.block-wide-image .case-image--phone {
+  max-width: calc(var(--measure-image) / 3);
+  margin-inline: auto;
+}
+
 .block-two-images {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

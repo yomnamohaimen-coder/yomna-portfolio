@@ -11,7 +11,7 @@
 //   prototypeUrl  link to the prototype (optional; no link is shown without it)
 //   blocks        the story, in order. Each block has a "type":
 //     text       { heading, paragraphs: [] }
-//     image      { src, alt, caption }
+//     image      { src, alt, caption, shape: 'phone' for a single phone screen (optional) }
 //     twoImages  { images: [{ src, alt, caption }, { src, alt, caption }] }
 //     quote      { text, source }
 //     results    { items: [{ value, label }] } (two to four items)
@@ -107,8 +107,10 @@ export const projects = [
       year: '2025',
       tools: ['Figma'],
     },
-    // TODO: a wide image of the final design for the opening (see gaps.md).
-    heroImage: { src: '', alt: 'Flexpay final design' },
+    heroImage: {
+      src: flexpayScreensOverview,
+      alt: 'Several Flexpay phone screens, including plan details with a payment breakdown and a "You\'re all set" screen at the end of sign-up.',
+    },
     prototypeUrl: 'https://www.figma.com/design/iof6FVLWu2L2sKjhZhvb8x/Flexpay?node-id=58-5058',
     blocks: [
       {
@@ -127,9 +129,10 @@ export const projects = [
       },
       {
         type: 'image',
-        src: flexpayScreensOverview,
-        alt: 'Several Flexpay phone screens, including plan details with a payment breakdown and a "You\'re all set" screen at the end of sign-up.',
-        caption: 'Plan details, the end of sign-up, and shopping screens.',
+        shape: 'phone',
+        src: flexpayCheckoutPlans,
+        alt: 'Flexpay checkout screen with 3, 6 and 12 month installment options and payment methods.',
+        caption: 'Checkout: choose a plan and a payment method on one screen.',
       },
       {
         type: 'text',
