@@ -238,6 +238,15 @@
   text-overflow: ellipsis;
 }
 
+/* On phones the highlight wraps instead of being cut off. */
+@media (max-width: 699.98px) {
+  .home-work-highlight {
+    overflow: visible;
+    white-space: normal;
+    text-overflow: clip;
+  }
+}
+
 .home-work-cta {
   margin: 0;
   font-family: var(--font-sans);
