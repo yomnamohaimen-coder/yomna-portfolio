@@ -101,8 +101,14 @@
 }
 
 /* The hero image is shown whole, at its own proportions, on the project's tint. */
-.case-hero img {
+.case-hero .case-image--wide img {
   background: var(--case-tint);
+}
+
+/* A single phone screen as the hero sits centered, as wide as one gallery column. */
+.case-hero .case-image--phone {
+  max-width: calc(var(--measure-image) / 3);
+  margin-inline: auto;
 }
 
 /* Blocks and the end links share the page gutter. */

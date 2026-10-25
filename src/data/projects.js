@@ -7,7 +7,8 @@
 // Case study fields:
 //   summary       one line under the title
 //   meta          { type, role, year, tools }
-//   heroImage     { src, alt, caption } (optional; no src shows a placeholder)
+//   heroImage     { src, alt, caption, shape: 'phone' for a single phone screen }
+//                 (optional; no src shows a placeholder)
 //   prototypeUrl  link to the prototype (optional; no link is shown without it)
 //   blocks        the story, in order. Each block has a "type":
 //     text       { heading, paragraphs: [] }
@@ -30,6 +31,17 @@ import flexpayOnboardingAllSet from '../assets/projects/flexpay/onboarding-all-s
 import flexpayOrderReview from '../assets/projects/flexpay/order-review.png'
 import flexpayScreensOverview from '../assets/projects/flexpay/screens-overview.png'
 import flexpayWelcome from '../assets/projects/flexpay/welcome.png'
+import goaldenAddWallet from '../assets/projects/goalden/add-wallet.png'
+import goaldenBudgets from '../assets/projects/goalden/budgets.png'
+import goaldenChooseBank from '../assets/projects/goalden/choose-bank.png'
+import goaldenConnectBank from '../assets/projects/goalden/connect-bank.png'
+import goaldenExpenseCategories from '../assets/projects/goalden/expense-categories.png'
+import goaldenHome from '../assets/projects/goalden/home.png'
+import goaldenNoAccountsYet from '../assets/projects/goalden/no-accounts-yet.png'
+import goaldenNotifications from '../assets/projects/goalden/notifications.png'
+import goaldenTransactions from '../assets/projects/goalden/transactions.png'
+import goaldenVerificationCode from '../assets/projects/goalden/verification-code.png'
+import goaldenWalletDetails from '../assets/projects/goalden/wallet-details.png'
 
 export const projects = [
   {
@@ -230,54 +242,92 @@ export const projects = [
     meta: {
       type: 'Concept project',
       role: 'Product designer',
-      year: '2024',
+      year: '2025',
       tools: ['Figma'],
     },
-    heroImage: { src: '', alt: 'Goalden final design' },
+    heroImage: {
+      src: goaldenHome,
+      shape: 'phone',
+      alt: 'Goalden home screen with total available balance, a list of accounts and recent transactions.',
+    },
+    prototypeUrl: 'https://www.figma.com/design/lR1RZhHDT4RyI5RkHvgbjd/Goalden?node-id=0-1',
     blocks: [
       {
         type: 'text',
         heading: 'The problem',
-        paragraphs: ['Placeholder. Why this problem matters, in a few sentences.'],
+        paragraphs: [
+          'My starting assumption was that many people want to save but feel lost without a clear starting point, and that finance apps feel intimidating to beginners. I designed for three groups: young professionals who want less money stress, people new to saving who want step-by-step guidance, and freelancers whose income changes from month to month.',
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'How might we help people with limited financial knowledge take control of their money and save towards meaningful goals without stress?',
+        source: 'The question I designed for',
       },
       {
         type: 'text',
         heading: 'The solution',
-        paragraphs: ['Placeholder. What was designed, in a few sentences.'],
+        paragraphs: [
+          'Goalden is a savings app that helps people take control of their money. People link a bank account or add a wallet by hand, see where their money goes, and set spending limits by category, with progress shown visually.',
+          'TODO: saving for goals and investment tips are part of the idea, but no screen shows them yet.',
+        ],
       },
-      { type: 'image', src: '', alt: 'Goalden solution', caption: 'Placeholder caption.' },
+      {
+        type: 'image',
+        shape: 'phone',
+        src: goaldenBudgets,
+        alt: 'Goalden budget screen with total income, total spending and a progress bar for each spending category.',
+        caption: 'Budgets: a spending limit per category, with progress at a glance.',
+      },
       {
         type: 'text',
         heading: 'How I did it',
-        paragraphs: ['Placeholder. The process, told as decisions.'],
+        paragraphs: [
+          'I wrote three personas to keep the design grounded: Nouran, a first-time saver; Karima, a freelance videographer with irregular income; and Salma, a working mom juggling several goals. TODO: whether the personas and findings came from talking to people or from desk research. I then mapped the app in a site map before designing the screens.',
+          'Because I assumed most people want to save but feel lost without a clear starting point, setup gives them structure: they link a bank account or add a wallet by hand, then pick the categories they usually spend on.',
+          'Because freelancers\' income changes from month to month, I assumed they need flexible options. People can track cash and savings in wallets they add themselves, not only through a linked bank.',
+          'Because many finance apps feel intimidating to beginners, I kept the numbers visual: a bar chart of spending and a progress bar for each budget category.',
+        ],
       },
-      { type: 'quote', text: 'Placeholder quote from the research.', source: 'Placeholder source' },
       {
-        type: 'twoImages',
+        type: 'gallery',
+        shape: 'phone',
         images: [
-          { src: '', alt: 'Goalden process screen one', caption: 'Placeholder caption.' },
-          { src: '', alt: 'Goalden process screen two', caption: 'Placeholder caption.' },
+          {
+            src: goaldenChooseBank,
+            alt: 'Goalden screen listing banks to connect, with an option to add a personal wallet instead.',
+            caption: 'Link a bank, or add a wallet by hand.',
+          },
+          {
+            src: goaldenExpenseCategories,
+            alt: 'Goalden screen asking people to pick the budget categories they usually spend on.',
+            caption: 'Pick familiar spending categories to start.',
+          },
+          {
+            src: goaldenTransactions,
+            alt: 'Goalden transactions screen with a bar chart of spending by day and a list of transactions.',
+            caption: 'Spending shown as a simple bar chart.',
+          },
         ],
       },
       {
         type: 'text',
         heading: 'The outcome',
-        paragraphs: ['Placeholder. What the design achieves, and what was learned.'],
-      },
-      {
-        type: 'results',
-        items: [
-          { value: '—', label: 'Placeholder result' },
-          { value: '—', label: 'Placeholder result' },
+        paragraphs: [
+          'Goalden is a concept project. The design covers sign-up with a verification code, linking a bank or adding a wallet, transactions, budgets, notifications and the profile.',
+          'TODO: whether the design was tested with people, what I learned, and what I would measure next.',
         ],
       },
       {
         type: 'gallery',
-        shape: 'landscape',
+        shape: 'phone',
         images: [
-          { src: '', alt: 'Goalden screen' },
-          { src: '', alt: 'Goalden screen' },
-          { src: '', alt: 'Goalden screen' },
+          { src: goaldenVerificationCode, alt: 'Goalden verification code screen asking for the code sent to a phone number.' },
+          { src: goaldenConnectBank, alt: 'Goalden screen explaining the steps to connect a bank account before going to the bank website.' },
+          { src: goaldenAddWallet, alt: 'Goalden add wallet screen with fields for a wallet name and value.' },
+          { src: goaldenWalletDetails, alt: 'Goalden personal wallet details with income, spending by category and a bar chart.' },
+          { src: goaldenNoAccountsYet, alt: 'Goalden empty home screen inviting people to link an account or add a first transaction.' },
+          { src: goaldenNotifications, alt: 'Goalden notifications confirming a wallet was created, an account was reviewed and a bank account was linked.' },
         ],
       },
     ],
