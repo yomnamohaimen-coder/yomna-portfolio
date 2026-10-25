@@ -99,7 +99,7 @@ export const projects = [
     title: 'Flexpay',
     highlight: 'One-line highlight goes here.',
     tint: 'var(--color-tint-blush)',
-    cover: null,
+    cover: flexpayScreensOverview,
     summary: 'A light, friendly BNPL experience designed for Egyptian shoppers.',
     meta: {
       type: 'Concept project',

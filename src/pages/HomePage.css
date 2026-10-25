@@ -198,11 +198,14 @@
   padding-inline: 1.25rem;
 }
 
+/* Cover images are shown whole, centered with room around them on the tint. */
 .home-work-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 2 * var(--space-lg));
+  max-height: calc(100% - 2 * var(--space-lg));
+  object-fit: contain;
+  border-radius: var(--radius-md);
 }
 
 .home-work-placeholder {
@@ -251,6 +254,11 @@
 @media (min-width: 48rem) {
   .home-work {
     padding-inline: var(--space-lg);
+  }
+
+  .home-work-cover img {
+    max-width: calc(100% - 2 * var(--space-xl));
+    max-height: calc(100% - 2 * var(--space-xl));
   }
 }
 
