@@ -119,7 +119,8 @@
 .case-end {
   display: grid;
   gap: var(--space-xl);
-  max-width: var(--measure-body);
+  /* As wide as the footer line below, so both dividers match. */
+  max-width: var(--measure-image);
   margin: var(--space-3xl) auto 0;
 }
 

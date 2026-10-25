@@ -34,14 +34,10 @@ import flexpayWelcome from '../assets/projects/flexpay/welcome.png'
 import goaldenAddWallet from '../assets/projects/goalden/add-wallet.png'
 import goaldenBudgets from '../assets/projects/goalden/budgets.png'
 import goaldenChooseBank from '../assets/projects/goalden/choose-bank.png'
-import goaldenConnectBank from '../assets/projects/goalden/connect-bank.png'
 import goaldenExpenseCategories from '../assets/projects/goalden/expense-categories.png'
 import goaldenHome from '../assets/projects/goalden/home.png'
-import goaldenNoAccountsYet from '../assets/projects/goalden/no-accounts-yet.png'
 import goaldenNotifications from '../assets/projects/goalden/notifications.png'
 import goaldenTransactions from '../assets/projects/goalden/transactions.png'
-import goaldenVerificationCode from '../assets/projects/goalden/verification-code.png'
-import goaldenWalletDetails from '../assets/projects/goalden/wallet-details.png'
 
 export const projects = [
   {
@@ -238,7 +234,7 @@ export const projects = [
     highlight: 'A beginner-friendly money app for accounts, budgets and goals.',
     tint: 'var(--color-tint-sage)',
     cover: null,
-    summary: 'A simple savings flow that guides beginners with clarity.',
+    summary: 'A beginner-friendly money app for accounts, budgets and goals.',
     meta: {
       type: 'Concept project',
       role: 'Product designer, solo',
@@ -267,7 +263,7 @@ export const projects = [
         type: 'text',
         heading: 'The solution',
         paragraphs: [
-          'Goalden is a savings app that helps people take control of their money. People link a bank account or add a wallet by hand, see where their money goes, set spending limits by category, save towards goals, and get investment suggestions based on an assessment of their investment style.',
+          'Goalden is a beginner-friendly money app for accounts, budgets and goals. People link a bank account or add a wallet by hand, see where their money goes, set spending limits by category, save towards goals, and get investment suggestions based on an assessment of their investment style.',
         ],
       },
       {
@@ -281,7 +277,7 @@ export const projects = [
         type: 'text',
         heading: 'How I did it',
         paragraphs: [
-          'This was a solo concept project: I did the research, UX, UI and prototype design. The research was desk research, supported by ChatGPT, and it was not validated with real users, so I treated each finding as an assumption to test. I wrote three assumption-based personas from desk research to guide the early decisions, then mapped the app in a site map before designing the screens.',
+          'This was a solo concept project: I did the research, UX, UI and prototype design. The research was desk research, supported by ChatGPT, and it was not validated with real users, so I treated each finding as an assumption to test. I wrote three assumption-based personas from desk research to guide the early decisions.',
           'Because I assumed most people want to save but feel lost without a clear starting point, setup gives them structure: they link a bank account or add a wallet by hand, then pick the categories they usually spend on.',
           'Because many finance apps feel intimidating to beginners, I kept the numbers visual: a bar chart of spending and a progress bar for each budget category.',
         ],
@@ -316,16 +312,10 @@ export const projects = [
       },
       {
         type: 'text',
-        heading: 'What I learned',
+        heading: "What I learned, and what's next",
         paragraphs: [
           'An app with many features needs a simple Home.',
           'Empty and waiting states, like the wait while a bank account links, keep people from feeling lost.',
-        ],
-      },
-      {
-        type: 'text',
-        heading: 'What I would measure next',
-        paragraphs: [
           'I would test with 3 to 5 people on two tasks, linking a bank account and adding a transaction, and measure task completion and time.',
         ],
       },
@@ -333,12 +323,26 @@ export const projects = [
         type: 'gallery',
         shape: 'phone',
         images: [
-          { src: goaldenVerificationCode, alt: 'Goalden verification code screen asking for the code sent to a phone number.' },
-          { src: goaldenConnectBank, alt: 'Goalden screen explaining the steps to connect a bank account before going to the bank website.' },
-          { src: goaldenAddWallet, alt: 'Goalden add wallet screen with fields for a wallet name and value.' },
-          { src: goaldenWalletDetails, alt: 'Goalden personal wallet details with income, spending by category and a bar chart.' },
-          { src: goaldenNoAccountsYet, alt: 'Goalden empty home screen inviting people to link an account or add a first transaction.' },
-          { src: goaldenNotifications, alt: 'Goalden notifications confirming a wallet was created, an account was reviewed and a bank account was linked.' },
+          {
+            src: goaldenHome,
+            alt: 'Goalden home screen with total available balance, a list of accounts and recent transactions.',
+            caption: 'Home: every account and recent spending in one place.',
+          },
+          {
+            src: goaldenAddWallet,
+            alt: 'Goalden add wallet screen with fields for a wallet name and value.',
+            caption: 'Add a wallet by hand to track cash and savings.',
+          },
+          {
+            src: goaldenNotifications,
+            alt: 'Goalden notifications confirming a wallet was created, an account was reviewed and a bank account was linked.',
+            caption: 'Notifications confirm each key step.',
+          },
+          {
+            src: goaldenTransactions,
+            alt: 'Goalden transactions screen with a bar chart of spending by day and a list of transactions.',
+            caption: 'All transactions, with spending by day.',
+          },
         ],
       },
     ],

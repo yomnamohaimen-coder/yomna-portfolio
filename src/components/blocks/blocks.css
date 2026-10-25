@@ -122,7 +122,7 @@
   max-width: var(--measure-body);
   margin: 0 auto;
   padding-left: var(--space-lg);
-  border-left: 2px solid var(--color-accent);
+  border-left: 2px solid var(--color-text-muted);
 }
 
 .block-quote blockquote {
@@ -205,6 +205,11 @@
 
   .block-gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Exactly four screens sit in one row instead of three plus one. */
+  .block-gallery:has(> :nth-child(4):last-child) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
