@@ -58,6 +58,8 @@
   --font-weight-heading: 600;
   /* Regular text weight. */
   --font-weight-body: 400;
+  /* Short bold lead-ins inside body text. */
+  --font-weight-strong: 600;
   /* Case-study text column, about 680px. */
   --measure-body: 42.5rem;
   /* Wider image column, about 1100px. */

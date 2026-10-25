@@ -12,12 +12,13 @@
 //   prototypeUrl  link to the prototype (optional; no link is shown without it)
 //   linkLabel     text for that link (optional; defaults to "View the prototype")
 //   blocks        the story, in order. Each block has a "type":
-//     text       { heading, paragraphs: [] }
+//     text       { heading, paragraphs: [] } (a paragraph can be { lead, text })
 //     image      { src, alt, caption, shape: 'phone' for a single phone screen (optional) }
 //     twoImages  { images: [{ src, alt, caption }, { src, alt, caption }] }
 //     quote      { text, source }
-//     results    { items: [{ value, label }] } (two to four items)
+//     results    { items: [{ value, label }], caption } (two to four items)
 //     gallery    { shape: 'landscape' or 'phone', images: [{ src, alt, caption }] }
+//   Any block can add tight: true to sit closer to the block above it.
 //
 // Images go in src/assets/projects/<slug>/. Import them at the top of this file
 // and use the import as src. An empty src shows an "Image placeholder" box.
@@ -377,11 +378,12 @@ export const projects = [
       type: 'Work project',
       role: 'Product designer at Sary',
       year: '2023',
-      tools: ['Amplitude', 'Figma'],
+      tools: ['Amplitude', 'Smartlook', 'Figma'],
     },
     heroImage: {
       src: uprHeatmapOnboarding,
-      alt: 'Eight Sary onboarding and registration screens with click heatmaps, from the welcome screen to the profile, with a legend from more clicks to fewer clicks.',
+      alt: 'Eight Sary onboarding and registration screens with click heatmaps, from the welcome screen to the profile.',
+      caption: 'Click heatmaps of the registration screens.',
     },
     // Temporary link; see content-import/usability-performance-report/gaps.md.
     prototypeUrl:
@@ -412,6 +414,8 @@ export const projects = [
       },
       {
         type: 'results',
+        tight: true,
+        caption: 'July to November, compared with March to May.',
         items: [
           { value: '26.8%', label: 'Onboarding confirmed, down from 45.4%' },
           { value: '32.0%', label: 'Completed orders, down from 54.5%' },
@@ -421,10 +425,21 @@ export const projects = [
       },
       {
         type: 'text',
+        tight: true,
         paragraphs: [
-          'In registration, people tried to scroll the onboarding screen, but it does not scroll, and they tapped its images as if they were buttons. The checkbox to accept the terms and privacy policy was hard to find and took several attempts. The bottom sheet for choosing how to verify a store had no back or close button, and a tap on "Need Help" got no response.',
-          'In checkout, some people tapped "Proceed to Payment", reached a seller verification screen, stayed a few seconds and left the app. Coupons caused friction too: wrong or expired codes, carts below the minimum value, and people not knowing coupons existed.',
-          'On the Discover tab, touches were mostly scrolling rather than taps, and the banners were not tailored to each business segment. The report also notes business changes in the same months, such as a removed seller and fewer coupon offers, that likely affected these numbers.',
+          {
+            lead: 'Registration.',
+            text: 'People tried to scroll the onboarding screen, but it does not scroll, and they tapped its images as if they were buttons. The checkbox to accept the terms and privacy policy was hard to find and took several attempts. The bottom sheet for choosing how to verify a store had no back or close button, and a tap on "Need Help" got no response.',
+          },
+          {
+            lead: 'Checkout.',
+            text: 'Some people tapped "Proceed to Payment", reached a seller verification screen, stayed a few seconds and left the app. Coupons caused friction too: wrong or expired codes, carts below the minimum value, and people not knowing coupons existed.',
+          },
+          {
+            lead: 'Discover tab.',
+            text: 'Touches were mostly scrolling rather than taps, and the banners were not tailored to each business segment.',
+          },
+          'The report also notes business changes in the same months, such as a removed seller and fewer coupon offers, that likely affected these numbers.',
         ],
       },
       {
@@ -457,17 +472,29 @@ export const projects = [
         type: 'text',
         heading: 'Recommendations',
         paragraphs: [
-          'Make the terms checkbox easier to see, through its placement, a larger size or a distinct color, and add a short hint that the onboarding screen has no more content below.',
-          'Suggest coupons smartly: offer alternatives for expired codes, suggest valid codes close to a mistyped one, and show how close the cart is to a coupon\'s minimum value. State coupon terms, like the minimum order, where coupons are given and used.',
-          'Consider showing seller verification later in checkout, closer to the end, when people are more invested in finishing the order.',
-          'Tailor banners and offers to each business segment, and add short in-app guides that explain how to use banner offers.',
+          {
+            lead: 'Registration.',
+            text: 'Make the terms checkbox easier to see, through its placement, a larger size or a distinct color, and add a short hint that the onboarding screen has no more content below.',
+          },
+          {
+            lead: 'Coupons.',
+            text: 'Make coupon suggestions smarter: offer alternatives for expired codes, suggest valid codes close to a mistyped one, and show how close the cart is to a coupon\'s minimum value. State coupon terms, like the minimum order, where coupons are given and used.',
+          },
+          {
+            lead: 'Seller verification.',
+            text: 'Consider showing seller verification later in checkout, closer to the end, when people are more invested in finishing the order.',
+          },
+          {
+            lead: 'Banners.',
+            text: 'Tailor banners and offers to each business segment, and add short in-app guides that explain how to use banner offers.',
+          },
         ],
       },
       {
         type: 'text',
         heading: 'The outcome',
         paragraphs: [
-          'I shared the report with the team in a meeting. I do not remember the details, and I do not know which recommendations were built. The report itself is the deliverable.',
+          'I presented the report to the team. I do not have a record of which recommendations were built, so I am not claiming results. The report itself is the deliverable.',
         ],
       },
     ],

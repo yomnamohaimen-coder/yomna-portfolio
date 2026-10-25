@@ -5,6 +5,11 @@
   gap: var(--space-3xl);
 }
 
+/* A block that belongs with the one above sits closer to it. */
+.case-blocks > .reveal--tight {
+  margin-top: calc(var(--space-xl) - var(--space-3xl));
+}
+
 /* Scroll reveal: a soft fade with a 12px upward move, played once. */
 .reveal {
   opacity: 0;
@@ -97,6 +102,10 @@
   margin-top: var(--space-md);
 }
 
+.block-text strong {
+  font-weight: var(--font-weight-strong);
+}
+
 /* 2. Image and 3. Two images */
 .block-wide-image,
 .block-two-images,
@@ -154,6 +163,19 @@
 }
 
 /* 5. Results: value above, label below, wrapping on narrow screens. */
+.block-results-wrap {
+  max-width: var(--measure-body);
+  margin: 0 auto;
+}
+
+.block-results-wrap figcaption {
+  margin-top: var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-body);
+  color: var(--color-text-muted);
+}
+
 .block-results {
   display: flex;
   flex-wrap: wrap;
@@ -207,6 +229,10 @@
 @media (min-width: 64rem) {
   .case-blocks {
     gap: var(--space-4xl);
+  }
+
+  .case-blocks > .reveal--tight {
+    margin-top: calc(var(--space-xl) - var(--space-4xl));
   }
 
   .block-gallery {

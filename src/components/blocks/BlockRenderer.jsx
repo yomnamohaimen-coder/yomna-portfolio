@@ -17,6 +17,7 @@ const components = {
 }
 
 // Shows each block with the component for its "type". Unknown types are skipped.
+// tight: true puts a block closer to the one above it, for content that belongs together.
 export default function BlockRenderer({ blocks = [] }) {
   return (
     <div className="case-blocks">
@@ -24,7 +25,7 @@ export default function BlockRenderer({ blocks = [] }) {
         const Component = components[block.type]
         if (!Component) return null
         return (
-          <Reveal key={index}>
+          <Reveal key={index} tight={block.tight}>
             <Component {...block} />
           </Reveal>
         )
