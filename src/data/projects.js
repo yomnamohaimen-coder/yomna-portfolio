@@ -235,7 +235,7 @@ export const projects = [
   {
     slug: 'goalden',
     title: 'Goalden',
-    highlight: 'A beginner-friendly money app that brings accounts, budgets and goals into one clear place.',
+    highlight: 'A beginner-friendly money app for accounts, budgets and goals.',
     tint: 'var(--color-tint-sage)',
     cover: null,
     summary: 'A simple savings flow that guides beginners with clarity.',
