@@ -39,6 +39,11 @@ import goaldenHome from '../assets/projects/goalden/home.png'
 import goaldenNotifications from '../assets/projects/goalden/notifications.png'
 import goaldenSitemap from '../assets/projects/goalden/sitemap.avif'
 import goaldenTransactions from '../assets/projects/goalden/transactions.png'
+import uprCartRecommended from '../assets/projects/usability-performance-report/cart-recommended.webp'
+import uprCheckoutDetails from '../assets/projects/usability-performance-report/checkout-details.webp'
+import uprDiscoverCarousel from '../assets/projects/usability-performance-report/discover-carousel.webp'
+import uprDiscoverScrolling from '../assets/projects/usability-performance-report/discover-scrolling.webp'
+import uprHeatmapOnboarding from '../assets/projects/usability-performance-report/heatmap-onboarding.webp'
 
 export const projects = [
   {
@@ -363,61 +368,101 @@ export const projects = [
   {
     slug: 'usability-performance-report',
     title: 'Usability Performance Report',
-    highlight: 'One-line highlight goes here.',
+    highlight: "A data-led review of where users drop off in Sary's B2B shopping app.",
     tint: 'var(--color-tint-powder)',
     cover: null,
-    summary: 'A usability analysis of user behavior with Amplitude and testing.',
+    summary: "A data-led review of where users drop off in Sary's B2B shopping app.",
     meta: {
-      type: 'Concept project',
-      role: 'UX researcher',
-      year: '2025',
-      tools: ['Amplitude', 'Maze'],
+      type: 'Work project',
+      role: 'Product designer at Sary',
+      year: '2023',
+      tools: ['Amplitude', 'Figma'],
     },
-    heroImage: { src: '', alt: 'Usability Performance Report overview' },
+    heroImage: {
+      src: uprHeatmapOnboarding,
+      alt: 'Eight Sary onboarding and registration screens with click heatmaps, from the welcome screen to the profile, with a legend from more clicks to fewer clicks.',
+    },
     blocks: [
       {
         type: 'text',
         heading: 'The problem',
-        paragraphs: ['Placeholder. Why this problem matters, in a few sentences.'],
+        paragraphs: [
+          'Sary is a B2B shopping app where businesses order products for their stores. Comparing March to May with the following four months, July to November, fewer people finished onboarding, completed orders, and tapped banners and announcements. I set out to find where people were dropping off, and why.',
+        ],
       },
       {
         type: 'text',
-        heading: 'The solution',
-        paragraphs: ['Placeholder. What was designed, in a few sentences.'],
+        heading: 'What I analyzed',
+        paragraphs: [
+          'I was the product designer at Sary, and I did the analysis and the report myself. I looked at four parts of the app: registration, the catalogue and search, the basket and checkout, and the Discover tab with its campaigns and promotions.',
+          'For each part, I compared the Amplitude funnels for March to May with July to November, watched session recordings, read the heatmaps, and noted bugs and issues along the way.',
+        ],
       },
-      { type: 'image', src: '', alt: 'Usability report findings', caption: 'Placeholder caption.' },
       {
         type: 'text',
-        heading: 'How I did it',
-        paragraphs: ['Placeholder. The process, told as decisions.'],
+        heading: 'What I found',
+        paragraphs: [
+          'Four key steps dropped between the two periods:',
+        ],
       },
-      { type: 'quote', text: 'Placeholder quote from the research.', source: 'Placeholder source' },
       {
-        type: 'twoImages',
+        type: 'results',
+        items: [
+          { value: '26.8%', label: 'Onboarding confirmed, down from 45.4%' },
+          { value: '32.0%', label: 'Completed orders, down from 54.5%' },
+          { value: '16.2%', label: 'Announcement pressed, down from 39.7%' },
+          { value: '19.8%', label: 'Banner selected, down from 29.6%' },
+        ],
+      },
+      {
+        type: 'text',
+        paragraphs: [
+          'In registration, people tried to scroll the onboarding screen, but it does not scroll, and they tapped its images as if they were buttons. The checkbox to accept the terms and privacy policy was hard to find and took several attempts. The bottom sheet for choosing how to verify a store had no back or close button, and a tap on "Need Help" got no response.',
+          'In checkout, some people tapped "Proceed to Payment", reached a seller verification screen, stayed a few seconds and left the app. Coupons caused friction too: wrong or expired codes, carts below the minimum value, and people not knowing coupons existed.',
+          'On the Discover tab, touches were mostly scrolling rather than taps, and the banners were not tailored to each business segment. The report also notes business changes in the same months, such as a removed seller and fewer coupon offers, that likely affected these numbers.',
+        ],
+      },
+      {
+        type: 'gallery',
+        shape: 'phone',
         images: [
-          { src: '', alt: 'Usability process image one', caption: 'Placeholder caption.' },
-          { src: '', alt: 'Usability process image two', caption: 'Placeholder caption.' },
+          {
+            src: uprCartRecommended,
+            alt: 'Heatmap of the Sary cart screen, with the most clicks on the "Recommended for you" section.',
+            caption: 'Cart: "Recommended for you" drew many clicks.',
+          },
+          {
+            src: uprCheckoutDetails,
+            alt: 'Heatmap of the Sary checkout screen, with clicks on delivery times, payment methods and the help chat.',
+            caption: 'Checkout: clicks on delivery times, payment and help.',
+          },
+          {
+            src: uprDiscoverScrolling,
+            alt: 'Heatmap of the Sary Discover tab, showing broad scrolling touches over the product sections.',
+            caption: 'Discover: touches were mostly scrolling.',
+          },
+          {
+            src: uprDiscoverCarousel,
+            alt: 'Heatmap of the Sary home screen, with clicks on the banner carousel.',
+            caption: 'The banner carousel got a fair share of taps.',
+          },
+        ],
+      },
+      {
+        type: 'text',
+        heading: 'Recommendations',
+        paragraphs: [
+          'Make the terms checkbox easier to see, through its placement, a larger size or a distinct color, and add a short hint that the onboarding screen has no more content below.',
+          'Suggest coupons smartly: offer alternatives for expired codes, suggest valid codes close to a mistyped one, and show how close the cart is to a coupon\'s minimum value. State coupon terms, like the minimum order, where coupons are given and used.',
+          'Consider showing seller verification later in checkout, closer to the end, when people are more invested in finishing the order.',
+          'Tailor banners and offers to each business segment, and add short in-app guides that explain how to use banner offers.',
         ],
       },
       {
         type: 'text',
         heading: 'The outcome',
-        paragraphs: ['Placeholder. What the report achieved, and what was learned.'],
-      },
-      {
-        type: 'results',
-        items: [
-          { value: '—', label: 'Placeholder result' },
-          { value: '—', label: 'Placeholder result' },
-        ],
-      },
-      {
-        type: 'gallery',
-        shape: 'landscape',
-        images: [
-          { src: '', alt: 'Usability report screen' },
-          { src: '', alt: 'Usability report screen' },
-          { src: '', alt: 'Usability report screen' },
+        paragraphs: [
+          'I shared the report with the team in a meeting. I do not remember the details, and I do not know which recommendations were built. The report itself is the deliverable.',
         ],
       },
     ],
