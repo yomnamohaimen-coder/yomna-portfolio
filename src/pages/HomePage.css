@@ -202,8 +202,8 @@
 .home-work-cover img {
   width: auto;
   height: auto;
-  max-width: calc(100% - 2 * var(--space-lg));
-  max-height: calc(100% - 2 * var(--space-lg));
+  max-width: calc(100% - 2 * var(--space-sm));
+  max-height: calc(100% - 2 * var(--space-sm));
   object-fit: contain;
   border-radius: var(--radius-md);
 }
@@ -254,11 +254,6 @@
 @media (min-width: 48rem) {
   .home-work {
     padding-inline: var(--space-lg);
-  }
-
-  .home-work-cover img {
-    max-width: calc(100% - 2 * var(--space-xl));
-    max-height: calc(100% - 2 * var(--space-xl));
   }
 }
 
