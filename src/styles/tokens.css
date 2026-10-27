@@ -24,10 +24,13 @@
   --color-tint-sand: #f1e6d6;
   /* About page only: warm charcoal, never pure black. */
   --color-surface-dark: #2b2522;
-  /* Cream text on the About page; about 14:1 on charcoal. */
-  --color-text-on-dark: var(--color-background);
+  /* Cream text on the About page; about 14:1 on charcoal. Same cream as the
+     page background, written out so the dark theme below can reuse it. */
+  --color-text-on-dark: #fbf7f2;
   /* Quieter cream for secondary text on charcoal; still above 4.5:1. */
   --color-text-muted-on-dark: #c9bbb3;
+  /* Quiet divider on charcoal (the same taupe as light-page captions). */
+  --color-border-on-dark: #7a6f68;
   /* Warm hairline so edges stay visible without a hard gray border. */
   --color-border: #e6dcd3;
 
@@ -100,6 +103,19 @@
   --ease-out: cubic-bezier(0, 0, 0.58, 1);
   /* How far a scroll reveal travels: 12px upward. */
   --motion-reveal: 12px;
+}
+
+/*
+  Dark theme for the About page. The page adds "theme-dark" to <html> while it
+  is open, so the header, page and footer all switch to charcoal and cream.
+*/
+:root.theme-dark {
+  --color-background: var(--color-surface-dark);
+  --color-text: var(--color-text-on-dark);
+  --color-text-muted: var(--color-text-muted-on-dark);
+  --color-border: var(--color-border-on-dark);
+  /* The footer CV button's hover fill; rose keeps cream text readable. */
+  --color-blush: var(--color-accent);
 }
 
 /* Reduced motion: durations and travel become zero. */

@@ -1,0 +1,155 @@
+/* About: the dark page. Colors come from the dark theme in tokens.css. */
+
+.about {
+  padding: var(--space-xl) var(--space-md) var(--space-3xl);
+  color: var(--color-text);
+}
+
+/* Same left edge and width as the header logo and the footer. */
+.about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  max-width: var(--measure-image);
+  margin-inline: auto;
+}
+
+.about-copy,
+.about-portrait {
+  min-width: 0;
+}
+
+/* The portrait is shown whole at its own 4:5 shape. */
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.about-copy {
+  max-width: var(--measure-body);
+}
+
+.about h1 {
+  margin: 0 0 var(--space-lg);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+}
+
+.about-bio p {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+.about-bio p + p {
+  margin-top: var(--space-md);
+}
+
+.about h2 {
+  margin: var(--space-2xl) 0 var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+}
+
+/* Skills: three short rows, a small label above plain text. */
+.about-skills {
+  display: grid;
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.about-skills dt {
+  margin-bottom: var(--space-3xs);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  letter-spacing: var(--letter-spacing-nav);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.about-skills dd {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+}
+
+/* CV: a rose primary button and a quiet text link. */
+.cv-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.cv-download {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--line-height-body);
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+}
+
+.cv-download:hover {
+  text-decoration: underline;
+  text-underline-offset: var(--space-3xs);
+}
+
+.cv-view {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-text-muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: var(--space-3xs);
+  transition: color var(--motion-duration-min) var(--ease-out);
+}
+
+.cv-view:hover,
+.cv-view:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.cv-download:focus-visible,
+.cv-view:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: var(--space-3xs);
+}
+
+/* Tablet and desktop: text on the left, portrait on the right. */
+@media (min-width: 48rem) {
+  .about {
+    padding-inline: var(--space-lg);
+  }
+
+  .about-inner {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.8fr);
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .about-portrait {
+    order: 2;
+  }
+}
