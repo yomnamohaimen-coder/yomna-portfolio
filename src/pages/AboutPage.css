@@ -1,34 +1,14 @@
-/* About: the dark page. Colors come from the dark theme in tokens.css. */
+/* About: one narrow column, centered on the cream page. */
 
 .about {
-  padding: var(--space-xl) var(--space-md) var(--space-3xl);
+  padding: var(--space-xl) var(--space-sm) var(--space-3xl);
   color: var(--color-text);
 }
 
-/* Same left edge and width as the header logo and the footer. */
 .about-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-xl);
-  max-width: var(--measure-image);
+  max-width: var(--measure-narrow);
   margin-inline: auto;
-}
-
-.about-copy,
-.about-portrait {
-  min-width: 0;
-}
-
-/* The portrait is shown whole at its own 4:5 shape. */
-.about-portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-}
-
-.about-copy {
-  max-width: var(--measure-body);
+  text-align: center;
 }
 
 .about h1 {
@@ -54,11 +34,12 @@
   margin-top: var(--space-md);
 }
 
+/* Same serif as "About", one step smaller. */
 .about h2 {
-  margin: var(--space-2xl) 0 var(--space-md);
-  font-family: var(--font-sans);
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-strong);
+  margin: var(--space-2xl) 0 var(--space-lg);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-heading);
   line-height: var(--line-height-heading);
   color: var(--color-text);
 }
@@ -87,11 +68,12 @@
   color: var(--color-text);
 }
 
-/* CV: a rose primary button and a quiet text link. */
+/* CV: a rose primary button and a quiet text link, centered. */
 .cv-buttons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-sm) var(--space-lg);
   margin-top: var(--space-2xl);
 }
@@ -104,7 +86,7 @@
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-strong);
   line-height: var(--line-height-body);
-  color: var(--color-text-on-dark);
+  color: var(--color-background);
   text-decoration: none;
 }
 
@@ -135,21 +117,4 @@
 .cv-view:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: var(--space-3xs);
-}
-
-/* Tablet and desktop: text on the left, portrait on the right. */
-@media (min-width: 48rem) {
-  .about {
-    padding-inline: var(--space-lg);
-  }
-
-  .about-inner {
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.8fr);
-    gap: var(--space-2xl);
-    align-items: start;
-  }
-
-  .about-portrait {
-    order: 2;
-  }
 }
