@@ -17,7 +17,7 @@
 //     twoImages  { images: [{ src, alt, caption }, { src, alt, caption }] }
 //     quote      { text, source }
 //     results    { items: [{ value, label }], caption } (two to four items)
-//     gallery    { shape: 'landscape' or 'phone', images: [{ src, alt, caption }] }
+//     gallery    { shape: 'landscape', 'phone' or 'wide', images: [{ src, alt, caption }] }
 //   Any block can add tight: true to sit closer to the block above it.
 //
 // Images go in src/assets/projects/<slug>/. Import them at the top of this file
@@ -26,6 +26,11 @@
 import flexpayCover from '../assets/covers/flexpay.webp'
 import goaldenCover from '../assets/covers/goalden.webp'
 import usabilityCover from '../assets/covers/usability-performance-report.webp'
+import sensaCover from '../assets/covers/sensa.webp'
+import sensaDashboard from '../assets/projects/sensa/dashboard.webp'
+import sensaHeatmap from '../assets/projects/sensa/heatmap.webp'
+import sensaRecordingsDark from '../assets/projects/sensa/recordings-dark.webp'
+import sensaReportsInsights from '../assets/projects/sensa/reports-insights.webp'
 import flexpayCheckoutPlans from '../assets/projects/flexpay/checkout-plans.png'
 import flexpayCreditLimit from '../assets/projects/flexpay/credit-limit.png'
 import flexpayHome from '../assets/projects/flexpay/home.png'
@@ -54,62 +59,115 @@ export const projects = [
   {
     slug: 'sensa',
     title: 'Sensa',
-    highlight: 'One-line highlight goes here.',
+    highlight: 'AI insights on user behavior for non-technical founders',
     tint: 'var(--color-tint-sand)',
-    cover: null,
-    summary: 'A data analysis tool, designed and built end to end.',
+    cover: sensaCover,
+    summary:
+      'Sensa turns raw user behavior into plain-language insights, so non-technical founders can decide what to fix.',
     meta: {
-      type: 'Concept project',
-      role: 'Product designer',
-      year: '2025',
-      tools: ['Figma', 'React'],
+      type: 'Portfolio product, designed and built with AI',
+      role: 'Product designer (I designed it and built it with AI tools)',
+      year: '2026',
+      tools: ['Cursor', 'Claude', 'Supabase', 'Vercel'],
     },
-    heroImage: { src: '', alt: 'Sensa final design' },
+    heroImage: {
+      src: sensaReportsInsights,
+      alt: 'Sensa Reports page with AI insights (summary, anomaly and recommendation) and the open panel showing the funnel and engagement data the AI was given.',
+      caption: 'Reports, with the Explainability panel open. Demo data from my test site, Harbor Homes.',
+    },
+    prototypeUrl: 'https://sensa-nine.vercel.app',
+    linkLabel: 'View the live demo',
     blocks: [
       {
         type: 'text',
         heading: 'The problem',
-        paragraphs: ['Placeholder. Why this problem matters, in a few sentences.'],
+        paragraphs: [
+          'Tools like Amplitude and Mixpanel are built for teams with technical resources. The brief I was given was a simpler alternative for solo founders and small business owners. My starting assumption was that non-technical owners do not want to read complex dashboards. They want to know what is happening and what to do about it. I did not run user research, so this is an assumption to test, not a finding.',
+        ],
       },
       {
         type: 'text',
         heading: 'The solution',
-        paragraphs: ['Placeholder. What was designed, in a few sentences.'],
-      },
-      { type: 'image', src: '', alt: 'Sensa solution', caption: 'Placeholder caption.' },
-      {
-        type: 'text',
-        heading: 'How I did it',
-        paragraphs: ['Placeholder. The process, told as decisions.'],
-      },
-      { type: 'quote', text: 'Placeholder quote from the research.', source: 'Placeholder source' },
-      {
-        type: 'twoImages',
-        images: [
-          { src: '', alt: 'Sensa process screen one', caption: 'Placeholder caption.' },
-          { src: '', alt: 'Sensa process screen two', caption: 'Placeholder caption.' },
-        ],
-      },
-      {
-        type: 'text',
-        heading: 'The outcome',
-        paragraphs: ['Placeholder. What the design achieves, and what was learned.'],
-      },
-      {
-        type: 'results',
-        items: [
-          { value: '—', label: 'Placeholder result' },
-          { value: '—', label: 'Placeholder result' },
+        paragraphs: [
+          'Sensa is an AI-powered user behavior analytics tool. A small script is added to a website. It records how people use the site: page views, clicks and sessions. Sensa then shows this as a usage funnel, click heatmaps and session recordings. It also writes plain-language insights, and a short summary for each recording. Every insight can be opened to see the data behind it.',
+          'The screens in this case study show demo data from my own test site, Harbor Homes. They are not real users.',
         ],
       },
       {
         type: 'gallery',
-        shape: 'landscape',
+        shape: 'wide',
         images: [
-          { src: '', alt: 'Sensa screen' },
-          { src: '', alt: 'Sensa screen' },
-          { src: '', alt: 'Sensa screen' },
+          {
+            src: sensaDashboard,
+            alt: 'Sensa dashboard with conversion rate, sessions, average session time, drop-off rate, the last analysis and a key insight.',
+            caption: 'Dashboard. Demo data from Harbor Homes.',
+          },
+          {
+            src: sensaHeatmap,
+            alt: 'Sensa heatmap page with the top clicked elements and a click heatmap over a Harbor Homes listing page.',
+            caption: 'Heatmap with the top clicked elements. Demo data from Harbor Homes.',
+          },
+          {
+            src: sensaRecordingsDark,
+            alt: 'Sensa session recordings in dark mode, with a list of recordings and a replay of a Harbor Homes visit.',
+            caption: 'Session recordings, in dark mode. Demo visits to Harbor Homes.',
+          },
+          {
+            src: '',
+            alt: 'Sensa Connect page',
+            caption: 'Connect, where the tracking script is added to a website.',
+          },
         ],
+      },
+      {
+        type: 'text',
+        heading: 'How I did it',
+        paragraphs: [
+          'I designed Sensa end to end and built it with AI tools, Claude and Cursor. These are the decisions that shaped it.',
+          {
+            lead: '1. From a CSV tool to behavior analytics.',
+            text: 'The first brief was a tool where users upload CSV data and get visual insights. I changed direction to a tool that tracks clicks, page views and session time. I believed an AI-powered behavior tool matched current demand better, and I wanted it in my portfolio.',
+          },
+          {
+            lead: '2. Plan before building.',
+            text: 'The project mattered to me, so I first wrote a detailed planning document with Claude: the product definition, the tech stack, how AI would be used, and a phased build order.',
+          },
+          {
+            lead: '3. Let people check the AI.',
+            text: 'Because I wanted people to trust the AI, I added an Explainability panel. It shows the funnel and engagement data the model was given, so a reader can see what an insight is based on. The AI also uses careful words like "likely" and "may indicate".',
+          },
+          {
+            lead: '4. Make it work on real websites.',
+            text: 'Real websites have rules that a demo does not. The tracking script first missed every page change inside single-page apps, so I changed how it listens to navigation. Screenshots taken in the browser lost the real images because of security policies, so I moved screenshots to the server. The recorder is served from Sensa\'s own files instead of a CDN, so it works on sites with strict security settings. I rejected any fix that quietly lowered the quality of the result.',
+          },
+          {
+            lead: '5. Rethink the interface.',
+            text: 'I ran a full UI overhaul with Impeccable, a design toolkit. It gave the product two-column layouts, a dark mode, a collapsible sidebar, insight cards with their own icons, and severity colors on the funnel. I worked on a separate git branch as a safety net.',
+          },
+          {
+            lead: 'How I worked with AI.',
+            text: 'One step, one prompt, one screen at a time. I review the code before applying it, and I confirm each step works before the next one. I commit after each logical unit, and I tag all demo data so it can be cleaned up.',
+          },
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'An AI claim needs its evidence.',
+        source: 'Design principle',
+      },
+      {
+        type: 'text',
+        heading: 'The outcome',
+        paragraphs: [
+          'Sensa is live and feature-complete. It tracks sessions automatically, shows a usage funnel, heatmaps and session recordings with AI summaries, writes AI insights with an Explainability panel, keeps recordings for 90 days, and has a dark mode and a collapsible sidebar.',
+          'Nine end-to-end tests pass. These are code tests, not user tests. I have not tested Sensa with real users, and I have no usage data or feedback to report.',
+          'Known limitations: the heatmap page picker shows technical page paths, which mean little to non-technical users. Explainability is a first version: it shows the data given to the model, not evidence for each separate claim. The heatmap says so itself when there are few clicks: "too small a sample to draw firm conclusions."',
+        ],
+      },
+      {
+        type: 'text',
+        heading: "What I learned, and what's next",
+        paragraphs: ['TODO: this section did not come through. Waiting for Yomna\'s text.'],
       },
     ],
   },

@@ -240,8 +240,13 @@
   }
 
   /* Exactly four screens sit in one row instead of three plus one. */
-  .block-gallery:has(> :nth-child(4):last-child) {
+  .block-gallery:not(.block-gallery--wide):has(> :nth-child(4):last-child) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* Desktop screenshots stay two per row so they remain readable. */
+  .block-gallery--wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
