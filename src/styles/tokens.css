@@ -39,6 +39,8 @@
   --font-size-h2: clamp(2rem, 1vw + 1.5rem, 2.5rem);
   /* Project titles, smaller than page headlines but still serif. */
   --font-size-h3: 1.5rem;
+  /* Serif lead paragraph: 24px on a phone, 28px on a wide screen. */
+  --font-size-lead: clamp(1.5rem, 1vw + 1.1rem, 1.75rem);
   /* Body copy at 18px. */
   --font-size-body: 1.125rem;
   /* Small uppercase navigation labels. */
@@ -49,6 +51,10 @@
   --line-height-heading: 1.05;
   /* Comfortable body leading inside the brief's 1.6–1.7 range. */
   --line-height-body: 1.65;
+  /* Lead paragraph leading: tighter than body, looser than headlines. */
+  --line-height-lead: 1.35;
+  /* Relaxed leading for secondary paragraphs. */
+  --line-height-relaxed: 1.7;
   /* Wide tracking so short navigation words feel quiet and spaced. */
   --letter-spacing-nav: 0.14em;
   /* Headline weight: Newsreader 600, the heavier of the two loaded weights. */
@@ -61,8 +67,8 @@
   --measure-body: 42.5rem;
   /* Wider image column, about 1100px. */
   --measure-image: 68.75rem;
-  /* Narrow centered column for the About page, about 640px. */
-  --measure-narrow: 40rem;
+  /* Comfortable line length for secondary paragraphs, about 60 characters. */
+  --measure-prose: 60ch;
   /* Narrow centered figure, such as a diagram, about 460px. */
   --measure-figure: 28.75rem;
 
