@@ -27,6 +27,7 @@ import flexpayCover from '../assets/covers/flexpay.webp'
 import goaldenCover from '../assets/covers/goalden.webp'
 import usabilityCover from '../assets/covers/usability-performance-report.webp'
 import sensaCover from '../assets/covers/sensa.webp'
+import sensaConnect from '../assets/projects/sensa/connect.webp'
 import sensaDashboard from '../assets/projects/sensa/dashboard.webp'
 import sensaHeatmap from '../assets/projects/sensa/heatmap.webp'
 import sensaRecordingsDark from '../assets/projects/sensa/recordings-dark.webp'
@@ -113,8 +114,8 @@ export const projects = [
             caption: 'Session recordings, in dark mode. Demo visits to Harbor Homes.',
           },
           {
-            src: '',
-            alt: 'Sensa Connect page',
+            src: sensaConnect,
+            alt: 'Sensa Connect page in dark mode, with the tracking snippet to copy, a field for the site URL and a "Connected, data is being received" message.',
             caption: 'Connect, where the tracking script is added to a website.',
           },
         ],
