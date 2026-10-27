@@ -12,7 +12,7 @@ export default function CaseStudyPage() {
   const nextProject = project ? getNextProject(project.slug) : null
 
   usePageTitle(
-    project ? `${project.title} — Yomna A.Mohaimen` : 'Page not found — Yomna A.Mohaimen',
+    project ? `${project.title} — Yomna Abdel-Mohaimen` : 'Page not found — Yomna Abdel-Mohaimen',
   )
 
   if (!project) return <NotFoundPage />

@@ -5,7 +5,7 @@ import { usePageTitle } from '../usePageTitle'
 import './HomePage.css'
 
 export default function HomePage() {
-  usePageTitle('Yomna A. Mohaimen')
+  usePageTitle('Yomna Abdel-Mohaimen')
 
   return (
     <main className="home-main">
@@ -14,7 +14,7 @@ export default function HomePage() {
           <div className="home-hero-copy">
             <div className="home-hero-text">
               <h1 id="home-hero-title">
-                Yomna A. Mohaimen,
+                Yomna Abdel-Mohaimen,
                 <br className="home-hero-break" /> product designer
               </h1>
               <p>
@@ -28,7 +28,7 @@ export default function HomePage() {
             <div className="home-hero-photo">
               <img
                 src={photo}
-                alt="Yomna A. Mohaimen in a denim jacket, with pink bougainvillea behind her"
+                alt="Yomna Abdel-Mohaimen in a denim jacket, with pink bougainvillea behind her"
               />
             </div>
           </div>

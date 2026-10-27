@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="top-nav">
       <div className="top-nav-inner">
-        <Link to="/" className="top-nav-logo" aria-label="Yomna A. Mohaimen">
+        <Link to="/" className="top-nav-logo" aria-label="Yomna Abdel-Mohaimen">
           Y
         </Link>
         <nav className="top-nav-links" aria-label="Main">

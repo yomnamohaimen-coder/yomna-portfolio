@@ -3,7 +3,7 @@ import { usePageTitle } from '../usePageTitle'
 import './LegacyPage.css'
 
 export default function NotFoundPage() {
-  usePageTitle('Page not found — Yomna A.Mohaimen')
+  usePageTitle('Page not found — Yomna Abdel-Mohaimen')
 
   return (
     <main className="page">

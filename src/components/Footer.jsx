@@ -16,11 +16,17 @@ export default function Footer() {
           >
             LinkedIn
           </a>
-          <a className="contact-footer-cv" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            className="contact-footer-cv"
+            href="/cv.pdf"
+            download="Yomna_Abdel-Mohaimen_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download CV
           </a>
         </div>
-        <p className="contact-footer-meta">© 2026 Yomna A. Mohaimen</p>
+        <p className="contact-footer-meta">© 2026 Yomna Abdel-Mohaimen</p>
       </div>
     </footer>
   )

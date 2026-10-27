@@ -4,7 +4,7 @@ export default function CvButtons() {
       <a href="/cv.pdf" target="_blank" rel="noreferrer">
         View CV
       </a>
-      <a href="/cv.pdf" download>
+      <a href="/cv.pdf" download="Yomna_Abdel-Mohaimen_CV.pdf">
         Download CV
       </a>
     </div>

@@ -12,7 +12,7 @@ const skills = [
 ]
 
 export default function AboutPage() {
-  usePageTitle('About — Yomna A.Mohaimen')
+  usePageTitle('About — Yomna Abdel-Mohaimen')
 
   return (
     <main className="page">
