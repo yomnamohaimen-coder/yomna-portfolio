@@ -40,6 +40,23 @@
   outline-offset: 0.25rem;
 }
 
+/* About: room between the CV buttons and the footer line, like the Home page. */
+.about-page {
+  padding-bottom: var(--space-3xl);
+}
+
+.skill-groups {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* A quiet label above each group of skill tags. */
+.skill-group-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #5c5c5c;
+}
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
