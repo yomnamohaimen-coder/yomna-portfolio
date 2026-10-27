@@ -90,10 +90,13 @@ The palette is drawn from the hero photo (bougainvillea pink, leaf green, denim 
 The story is simple: Problem, Solution, How I did it, Outcome. See the next section.
 
 **About (built)**
-- Same cream page and brown text as the rest of the site; rose only for interaction.
-- One narrow column (about 640 px) centered on the page: a large serif "About" headline, a short three-paragraph bio, a smaller serif "Skills and tools" heading, and skills as three rows (small label, items separated by " · ").
-- "Download CV" is the rose primary button, with a quiet "View CV" link beside it. Contact details live in the footer.
-- No portrait on About; the photo lives on Home.
+- Cream page background and brown text, like the rest of the site; rose only for interaction. No photo (the portrait lives on Home).
+- Left-aligned two-column layout on the 12-column grid. Left (columns 1-4): the "About" headline in Newsreader, large, on the same left edge as the logo and footer. Right (columns 5-12): the content.
+- The first paragraph is a Newsreader lead (about 28 px, line-height about 1.35, brown). The other paragraphs are Figtree 18 px, line-height about 1.7, in a softer brown (the main brown at 85% opacity), at most about 60 characters wide.
+- "Skills and tools" is a small taupe caps label. Skills are rows divided by thin warm hairlines: the group label (small taupe caps) on the left, the items on the right as plain text separated by " · ".
+- "Download CV" is the rose primary button, followed by a quiet underlined "View CV" link, left-aligned, with generous space above them and above the footer. Contact details live in the footer.
+- Phone: one left-aligned column with 16 px gutters; lead paragraph about 24 px; each skill label sits above its items.
+- No text is centered.
 
 ## Case study structure
 

@@ -8,6 +8,8 @@
   --color-background: #fbf7f2;
   /* Warm brown for headlines and body; about 11.6:1 on cream. */
   --color-text: #3b3330;
+  /* The same brown at 85% opacity, for secondary paragraphs; about 7.4:1 on cream. */
+  --color-text-soft: color-mix(in srgb, var(--color-text) 85%, transparent);
   /* Soft taupe for captions only; about 4.6:1 on cream, so not for long paragraphs. */
   --color-text-muted: #7a6f68;
   /* The only accent: links, hover, and the active menu item, not small body text. */

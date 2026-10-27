@@ -48,7 +48,7 @@
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-body);
   line-height: var(--line-height-relaxed);
-  color: var(--color-text-muted);
+  color: var(--color-text-soft);
   text-wrap: pretty;
 }
 

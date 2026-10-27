@@ -33,6 +33,9 @@ short summary of it.
 ## Site structure
 
 - Navigation: Home, About, Contact.
+- About: cream background, left-aligned two-column layout (headline on the
+  left, content on the right), Newsreader headline and lead paragraph,
+  hairline skill rows, no photo, no centered text.
 - The footer (`src/components/Footer.jsx`) has `id="contact"` and shows on
   every page; the Contact link scrolls to it.
 - Case studies, always in this order:
