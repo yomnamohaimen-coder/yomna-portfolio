@@ -18,10 +18,16 @@
   min-width: 0;
 }
 
+/* The headline size can follow this column's width (see the h1 below). */
+.home-hero-copy {
+  container-type: inline-size;
+}
+
 .home-hero h1 {
   margin: 0 0 var(--space-md);
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 2.4vw + 1.4rem, 4.5rem);
+  /* Scales down only when the column is too narrow for the full surname. */
+  font-size: min(clamp(3.5rem, 2.4vw + 1.4rem, 4.5rem), var(--font-size-hero-name-fit));
   font-weight: var(--font-weight-heading);
   line-height: var(--line-height-heading);
   color: var(--color-text);
@@ -30,6 +36,11 @@
 
 .home-hero-break {
   display: none;
+}
+
+/* Keeps the hyphenated surname on one line. */
+.home-hero-nowrap {
+  white-space: nowrap;
 }
 
 .home-hero-text {

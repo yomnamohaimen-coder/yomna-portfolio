@@ -38,6 +38,9 @@
 
   /* Large hero headline: 56px on a phone, up to 80px on a wide screen. */
   --font-size-h1: clamp(3.5rem, 4vw + 1.5rem, 5rem);
+  /* Largest Home headline size that keeps "Abdel-Mohaimen," on one line,
+     as a share of the headline's column width. */
+  --font-size-hero-name-fit: 11.8cqi;
   /* Section headline, kept inside the brief's 32–40px range. */
   --font-size-h2: clamp(2rem, 1vw + 1.5rem, 2.5rem);
   /* Project titles, smaller than page headlines but still serif. */

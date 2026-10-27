@@ -14,7 +14,7 @@ export default function HomePage() {
           <div className="home-hero-copy">
             <div className="home-hero-text">
               <h1 id="home-hero-title">
-                Yomna Abdel-Mohaimen,
+                Yomna <span className="home-hero-nowrap">Abdel-Mohaimen,</span>
                 <br className="home-hero-break" /> product designer
               </h1>
               <p>
