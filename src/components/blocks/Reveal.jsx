@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 // Fades its content in with a small upward move, once, when it enters the
 // screen. With reduced motion, the content is simply shown.
-export default function Reveal({ children }) {
+export default function Reveal({ children, tight = false }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
@@ -28,7 +28,10 @@ export default function Reveal({ children }) {
   }, [])
 
   return (
-    <div ref={ref} className={visible ? 'reveal is-visible' : 'reveal'}>
+    <div
+      ref={ref}
+      className={['reveal', visible && 'is-visible', tight && 'reveal--tight'].filter(Boolean).join(' ')}
+    >
       {children}
     </div>
   )

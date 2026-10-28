@@ -44,7 +44,7 @@ The reader is a recruiter or hiring manager at an international or European comp
 | roomfive.net | Mostly white page; one pink/red accent used only for the navigation labels and for clicks | Nothing noted |
 | amylalai.com | Calm, clear images; green, white and blue palette; large serif headline; elegant navigation bar; a different background image per project inside one layout | Nothing noted |
 | pratibhajoshi.com | Soft, welcoming feeling; pastel project cards; large photo of the designer; organized | The strong pink-to-purple gradient |
-| kysondana.com | Bold scale and animation; About page as a large portrait with large text; white Home and dark About | Loud energy: keep the size, drop the volume |
+| kysondana.com | Bold scale and animation | Loud energy: keep the size, drop the volume; the dark About page |
 | chaachiedesigns.framer.website | Hover animation: other projects fade back while the hovered one stays highlighted | The black background |
 | tparkes.com | Nothing | Messy work grid: no pattern for the eye to follow |
 
@@ -64,7 +64,6 @@ The palette is drawn from the hero photo (bougainvillea pink, leaf green, denim 
 | Card tint: Flexpay | Blush | #F6E3E6 | Flexpay card and opening block; also the block behind the hero photo |
 | Card tint: Goalden | Sage | #DCE5D8 | Goalden card and opening block |
 | Card tint: Usability Performance Report | Powder blue | #DDE6EE | Usability card and opening block |
-| Dark surface | Warm charcoal | #2B2522 | About page background, with cream text and a warm stone muted text color (token) |
 
 - Never use pure white or pure black.
 - The rose accent is about 3.8:1 against the cream background: use it for large text, borders, icons and hover states, not for small body text.
@@ -90,9 +89,14 @@ The palette is drawn from the hero photo (bougainvillea pink, leaf green, denim 
 **Case study page (to build)**
 The story is simple: Problem, Solution, How I did it, Outcome. See the next section.
 
-**About (to build)**
-- Dark warm page (charcoal with cream text) as a deliberate change of mood, with a large portrait and large serif text saying who she is.
-- Resume and contact details are folded into this page.
+**About (built)**
+- Cream page background and brown text, like the rest of the site; rose only for interaction. No photo (the portrait lives on Home).
+- Left-aligned two-column layout on the 12-column grid. Left (columns 1-4): the "About" headline in Newsreader, large, on the same left edge as the logo and footer. Right (columns 5-12): the content.
+- The first paragraph is a Newsreader lead (about 28 px, line-height about 1.35, brown). The other paragraphs are Figtree 18 px, line-height about 1.7, in a softer brown (the main brown at 85% opacity), at most about 60 characters wide.
+- "Skills and tools" is a small taupe caps label. Skills are rows divided by thin warm hairlines: the group label (small taupe caps) on the left, the items on the right as plain text separated by " · ".
+- "Download CV" is the rose primary button, followed by a quiet underlined "View CV" link, left-aligned, with generous space above them and above the footer. Contact details live in the footer.
+- Phone: one left-aligned column with 16 px gutters; lead paragraph about 24 px; each skill label sits above its items.
+- No text is centered.
 
 ## Case study structure
 
@@ -120,12 +124,11 @@ Layout: text column about 680 px, images about 1100 px, generous vertical space 
 ## Imagery
 
 - **Hero photo:** the portrait with the pink bougainvillea and the denim jacket, already cropped to 4:5 as `src/assets/yomna-hero-4x5.jpg`. Do not crop or zoom it again in CSS. Keep the natural colors with no filter.
-- **About photo:** a wider crop from the same session, so the two pages feel related without repeating the same image.
 - **Project covers:** one consistent treatment for all four: device or screen mockups on a flat tint from the palette, 4:3, same shadow. Files go in `src/assets/covers/` as sensa.jpg, flexpay.jpg, goalden.jpg and usability-performance-report.jpg.
 
 ## What we avoid
 
-- A black or very dark Home page (the dark mood is reserved for About).
+- A black or very dark page anywhere on the site.
 - Gradients, especially strong pink-to-purple ones.
 - Pure white and pure black.
 - More than one accent color, or using the accent as decoration.

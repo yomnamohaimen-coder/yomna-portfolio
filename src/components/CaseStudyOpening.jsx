@@ -37,7 +37,7 @@ export default function CaseStudyOpening({ project }) {
         </div>
       </div>
       <div className="case-hero">
-        <CaseImage image={heroImage ?? { alt: `${title} final design` }} />
+        <CaseImage image={heroImage ?? { alt: `${title} final design` }} shape={heroImage?.shape} />
       </div>
     </header>
   )

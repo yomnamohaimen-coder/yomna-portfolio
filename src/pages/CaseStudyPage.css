@@ -100,6 +100,17 @@
   box-sizing: content-box;
 }
 
+/* The hero image is shown whole, at its own proportions, on the project's tint. */
+.case-hero .case-image--wide img {
+  background: var(--case-tint);
+}
+
+/* A single phone screen as the hero sits centered, as wide as one gallery column. */
+.case-hero .case-image--phone {
+  max-width: calc(var(--measure-image) / 3);
+  margin-inline: auto;
+}
+
 /* Blocks and the end links share the page gutter. */
 .case-body {
   padding: var(--space-3xl) var(--space-md) 0;
@@ -108,7 +119,8 @@
 .case-end {
   display: grid;
   gap: var(--space-xl);
-  max-width: var(--measure-body);
+  /* As wide as the footer line below, so both dividers match. */
+  max-width: var(--measure-image);
   margin: var(--space-3xl) auto 0;
 }
 

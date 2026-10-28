@@ -12,7 +12,7 @@ export default function CaseStudyPage() {
   const nextProject = project ? getNextProject(project.slug) : null
 
   usePageTitle(
-    project ? `${project.title} — Yomna A.Mohaimen` : 'Page not found — Yomna A.Mohaimen',
+    project ? `${project.title} — Yomna Abdel-Mohaimen` : 'Page not found — Yomna Abdel-Mohaimen',
   )
 
   if (!project) return <NotFoundPage />
@@ -28,8 +28,13 @@ export default function CaseStudyPage() {
         {project.prototypeUrl || nextProject ? (
           <nav className="case-end" aria-label="Project">
             {project.prototypeUrl ? (
-              <a className="case-link" href={project.prototypeUrl} target="_blank" rel="noreferrer">
-                View the prototype <span aria-hidden="true">↗</span>
+              <a
+                className="case-link"
+                href={project.prototypeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.linkLabel ?? 'View the prototype'} <span aria-hidden="true">↗</span>
               </a>
             ) : null}
             {nextProject ? (

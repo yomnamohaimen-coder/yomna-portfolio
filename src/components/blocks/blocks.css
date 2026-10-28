@@ -5,6 +5,11 @@
   gap: var(--space-3xl);
 }
 
+/* A block that belongs with the one above sits closer to it. */
+.case-blocks > .reveal--tight {
+  margin-top: calc(var(--space-xl) - var(--space-3xl));
+}
+
 /* Scroll reveal: a soft fade with a 12px upward move, played once. */
 .reveal {
   opacity: 0;
@@ -53,7 +58,7 @@
   aspect-ratio: 4 / 3;
 }
 
-.case-image--phone img,
+/* Phone screens keep their own shape so device frames are never cropped. */
 .case-image--phone .case-image-placeholder {
   aspect-ratio: 9 / 19.5;
 }
@@ -97,11 +102,48 @@
   margin-top: var(--space-md);
 }
 
+.block-text strong {
+  font-weight: var(--font-weight-strong);
+}
+
+.block-text ul {
+  margin: 0;
+  padding-left: var(--space-md);
+}
+
+.block-text p + ul {
+  margin-top: var(--space-md);
+}
+
+.block-text li {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+.block-text li + li {
+  margin-top: var(--space-xs);
+}
+
 /* 2. Image and 3. Two images */
 .block-wide-image,
 .block-two-images,
 .block-gallery {
   max-width: var(--measure-image);
+  margin-inline: auto;
+}
+
+/* A single phone screen sits centered, as wide as one gallery column. */
+.block-wide-image .case-image--phone {
+  max-width: calc(var(--measure-image) / 3);
+  margin-inline: auto;
+}
+
+/* A narrow figure, such as a diagram, sits centered at its own proportions. */
+.block-wide-image .case-image--narrow {
+  max-width: var(--measure-figure);
   margin-inline: auto;
 }
 
@@ -116,7 +158,7 @@
   max-width: var(--measure-body);
   margin: 0 auto;
   padding-left: var(--space-lg);
-  border-left: 2px solid var(--color-accent);
+  border-left: 2px solid var(--color-text-muted);
 }
 
 .block-quote blockquote {
@@ -142,6 +184,19 @@
 }
 
 /* 5. Results: value above, label below, wrapping on narrow screens. */
+.block-results-wrap {
+  max-width: var(--measure-body);
+  margin: 0 auto;
+}
+
+.block-results-wrap figcaption {
+  margin-top: var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-body);
+  color: var(--color-text-muted);
+}
+
 .block-results {
   display: flex;
   flex-wrap: wrap;
@@ -197,8 +252,22 @@
     gap: var(--space-4xl);
   }
 
+  .case-blocks > .reveal--tight {
+    margin-top: calc(var(--space-xl) - var(--space-4xl));
+  }
+
   .block-gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Exactly four screens sit in one row instead of three plus one. */
+  .block-gallery:not(.block-gallery--wide):has(> :nth-child(4):last-child) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* Desktop screenshots stay two per row so they remain readable. */
+  .block-gallery--wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
