@@ -1,5 +1,6 @@
 // A paragraph is a string, or { lead, text } for a short bold lead-in.
-export default function TextBlock({ heading, paragraphs = [] }) {
+// items: an optional bullet list shown after the paragraphs.
+export default function TextBlock({ heading, paragraphs = [], items = [] }) {
   return (
     <section className="block-text">
       {heading ? <h2>{heading}</h2> : null}
@@ -12,6 +13,13 @@ export default function TextBlock({ heading, paragraphs = [] }) {
           </p>
         ),
       )}
+      {items.length ? (
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
     </section>
   )
 }

@@ -12,7 +12,8 @@
 //   prototypeUrl  link to the prototype (optional; no link is shown without it)
 //   linkLabel     text for that link (optional; defaults to "View the prototype")
 //   blocks        the story, in order. Each block has a "type":
-//     text       { heading, paragraphs: [] } (a paragraph can be { lead, text })
+//     text       { heading, paragraphs: [], items: [] } (a paragraph can be { lead, text };
+//                items is an optional bullet list)
 //     image      { src, alt, caption, shape: 'phone' for a single phone screen (optional) }
 //     twoImages  { images: [{ src, alt, caption }, { src, alt, caption }] }
 //     quote      { text, source }
@@ -74,10 +75,12 @@ export const projects = [
     heroImage: {
       src: sensaReportsInsights,
       alt: 'Sensa Reports page with AI insights (summary, anomaly and recommendation) and the open panel showing the funnel and engagement data the AI was given.',
-      caption: 'Reports, with the Explainability panel open. Demo data from my test site, Harbor Homes.',
+      caption: 'Reports, with the Explainability panel open. Simulated visits to Harbor Homes.',
     },
-    prototypeUrl: 'https://sensa-nine.vercel.app',
-    linkLabel: 'View the live demo',
+    // Hidden for now; turn back on when the live demo is ready for visitors
+    // (see docs/before-deploy.md).
+    // prototypeUrl: 'https://sensa-nine.vercel.app',
+    // linkLabel: 'View the live demo',
     blocks: [
       {
         type: 'text',
@@ -91,7 +94,7 @@ export const projects = [
         heading: 'The solution',
         paragraphs: [
           'Sensa is an AI-powered user behavior analytics tool. A small script is added to a website. It records how people use the site: page views, clicks and sessions. Sensa then shows this as a usage funnel, click heatmaps and session recordings. It also writes plain-language insights, and a short summary for each recording. Every insight can be opened to see the data behind it.',
-          'The screens in this case study show demo data from my own test site, Harbor Homes. They are not real users.',
+          'The screens in this case study use simulated data. I built a test website, Harbor Homes, and a script that generates fake visits to it, so Sensa has data to analyze. These are not real users.',
         ],
       },
       {
@@ -101,17 +104,17 @@ export const projects = [
           {
             src: sensaDashboard,
             alt: 'Sensa dashboard with conversion rate, sessions, average session time, drop-off rate, the last analysis and a key insight.',
-            caption: 'Dashboard. Demo data from Harbor Homes.',
+            caption: 'Dashboard. Simulated visits to Harbor Homes.',
           },
           {
             src: sensaHeatmap,
             alt: 'Sensa heatmap page with the top clicked elements and a click heatmap over a Harbor Homes listing page.',
-            caption: 'Heatmap with the top clicked elements. Demo data from Harbor Homes.',
+            caption: 'Heatmap with the top clicked elements. Simulated visits to Harbor Homes.',
           },
           {
             src: sensaRecordingsDark,
             alt: 'Sensa session recordings in dark mode, with a list of recordings and a replay of a Harbor Homes visit.',
-            caption: 'Session recordings, in dark mode. Demo visits to Harbor Homes.',
+            caption: 'Session recordings, in dark mode. Simulated visits to Harbor Homes.',
           },
           {
             src: sensaConnect,
@@ -167,8 +170,12 @@ export const projects = [
       },
       {
         type: 'text',
-        heading: "What I learned, and what's next",
-        paragraphs: ['TODO: this section did not come through. Waiting for Yomna\'s text.'],
+        heading: "What's next",
+        items: [
+          'Test Sensa with real founders and small business owners.',
+          'Replace the technical page paths in the heatmap picker with readable page names.',
+          'Make Explainability show evidence for each claim, not just the data given to the model.',
+        ],
       },
     ],
   },
