@@ -197,6 +197,7 @@ export const projects = [
       alt: 'Several Flexpay phone screens, including plan details with a payment breakdown and a "You\'re all set" screen at the end of sign-up.',
     },
     prototypeUrl: 'https://www.figma.com/design/iof6FVLWu2L2sKjhZhvb8x/Flexpay?node-id=58-5058',
+    linkLabel: 'View the design in Figma',
     blocks: [
       {
         type: 'text',
